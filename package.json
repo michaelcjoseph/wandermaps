@@ -4,7 +4,9 @@
   "description": "Google Maps for different cities with things to do/see/eat",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm build && node dist/app.js",
+    "build": "webpack -p --config ./webpack.config.js --progress --colors",
+    "devserve": "webpack-dev-server --progress --colors"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,7 @@
     "express": "^4.15.2",
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
-    "react-router": "^4.0.0"
+    "react-router": "^3.0.3"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",

@@ -1,23 +1,19 @@
-const path = require('path');
-const webpack = require('webpack');
+const path = require("path");
+const webpack = require("webpack");
 
 const debug = process.env.NODE_ENV !== "production";
 
 module.exports = {
-  devtool: debug ? 'eval' : 'cheap-module-source-map',
-  entry: path.join(__dirname, 'app', 'index.jsx'),
+  devtool: debug ? "eval" : "cheap-module-source-map",
+  entry: path.join(__dirname, "app", "index.jsx"),
   devServer: {
     inline: true,
     port: 8080,
-    contentBase: "src/static/",
-    historyApiFallback: {
-      index: '/index-static.html'
-    }
+    contentBase: "dist/"
   },
   output: {
-    path: path.join(__dirname, 'dist'),
-    publicPath: '/dist/',
-    filename: 'bundle.js'
+    path: path.join(__dirname, "dist"),
+    filename: "bundle.js"
   },
   module: {
     loaders: [
@@ -33,7 +29,7 @@ module.exports = {
   },
   plugins: debug ? [] : [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
     }),
     new webpack.NoErrorsPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
