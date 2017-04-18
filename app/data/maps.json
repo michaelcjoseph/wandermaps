@@ -1,0 +1,32 @@
+[
+  {
+    "id": "tokyo-japan",
+    "city": "Tokyo",
+    "country": "Japan",
+    "url": ""
+  },
+  {
+    "id": "kyoto-japan",
+    "city": "Kyoto",
+    "country": "Japan",
+    "url": ""
+  },
+  {
+    "id": "hiroshima-japan",
+    "city": "Hiroshima",
+    "country": "Japan",
+    "url": ""
+  },
+  {
+    "id": "madrid-spain",
+    "city": "Madrid",
+    "country": "Spain",
+    "url": ""
+  },
+  {
+    "id": "barcelona-spain",
+    "city": "Barcelona",
+    "country": "Spain",
+    "url": ""
+  }
+]
