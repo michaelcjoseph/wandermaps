@@ -13,7 +13,9 @@ const Home = (props) => {
         <Title />
       </div>
       <div className="col-xs-12 col-md-6 col-lg-6">
-        <SearchBar />
+        <SearchBar 
+          search_value={props.search_value} 
+          handleSearch={props.handleSearch} />
         <MapsList maps_data={props.maps_data} />
       </div>
     </div>

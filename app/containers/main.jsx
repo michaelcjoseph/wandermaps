@@ -6,8 +6,35 @@ class Main extends React.Component {
     super(props);
 
     this.state = {
-      maps_data: maps_data
+      all_maps_data: maps_data,
+      filtered_maps_data: maps_data,
+      search_value: ''
     };
+
+    this.handleSearch = this.handleSearch.bind(this);
+    this.handleFilterMaps = this.handleFilterMaps.bind(this);
+  }
+
+  handleSearch(e) {
+    var filtered_maps = this.handleFilterMaps( e.target.value );
+
+    this.setState({
+      filtered_maps_data: filtered_maps,
+      search_value: e.target.value
+    });
+  }
+
+  handleFilterMaps( filter_value ) {
+    var filtered_maps = [];
+
+    for( var i=0; i < this.state.all_maps_data.length; i++ ) {
+      if (this.state.all_maps_data[i].city.includes(filter_value) || 
+          this.state.all_maps_data[i].country.includes(filter_value)) {
+        filtered_maps.push(this.state.all_maps_data[i]);
+      }
+    }
+
+    return filtered_maps;
   }
 
   render() {
@@ -15,7 +42,9 @@ class Main extends React.Component {
       <div>
         {React.cloneElement(
           this.props.children, {
-            maps_data: this.state.maps_data
+            maps_data: this.state.filtered_maps_data,
+            search_value: this.state.search_value,
+            handleSearch: this.handleSearch
           }
         )}
       </div>
