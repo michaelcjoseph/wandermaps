@@ -1,9 +1,16 @@
 import React from 'react';
+import MapItem from './map_item.jsx';
 
 const MapsList = (props) => {
+  const renderMapItem = (item, i) => {
+    return (
+      <MapItem key={i} item={item} />
+    )
+  }
+
   return (
     <div className="col-xs-12">
-      <h1>MapsList Component</h1>
+      {props.maps_data.map(renderMapItem)}
     </div>
   );
 }
