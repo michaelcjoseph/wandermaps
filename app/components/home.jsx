@@ -1,23 +1,23 @@
 import React from 'react';
 
+import Header from './Header.jsx';
 import Title from './title.jsx';
 import SearchBar from './search_bar.jsx';
-import Maps from './maps.jsx';
+import MapsList from './maps_list.jsx';
 
-class Home extends React.Component {
-  render() {
-    return (
-      <div className="col-xs-12">
-        <div className="col-xs-12 col-md-6 col-lg-6">
-          <Title />
-        </div>
-        <div className="col-xs-12 col-md-6 col-lg-6">
-          <SearchBar />
-          <Maps />
-        </div>
+const Home = (props) => {
+  return (
+    <div className="col-xs-12">
+      <div className="col-xs-12 col-md-6 col-lg-6">
+        <Header />
+        <Title />
       </div>
-    );
-  }
+      <div className="col-xs-12 col-md-6 col-lg-6">
+        <SearchBar />
+        <MapsList />
+      </div>
+    </div>
+  );
 }
 
 export default Home;
