@@ -1,6 +1,6 @@
 import React from 'react';
 
-class MainContainer extends React.Component { 
+class Main extends React.Component { 
   render() {
     return ( 
       <div>
@@ -12,4 +12,4 @@ class MainContainer extends React.Component {
   }
 }
 
-export default MainContainer;
+export default Main;
