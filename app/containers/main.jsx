@@ -12,11 +12,11 @@ class Main extends React.Component {
     };
 
     this.handleSearch = this.handleSearch.bind(this);
-    this.handleFilterMaps = this.handleFilterMaps.bind(this);
+    this.handleSearchFilter = this.handleSearchFilter.bind(this);
   }
 
   handleSearch(e) {
-    var filtered_maps = this.handleFilterMaps( e.target.value );
+    var filtered_maps = this.handleSearchFilter( e.target.value );
 
     this.setState({
       filtered_maps_data: filtered_maps,
@@ -24,7 +24,7 @@ class Main extends React.Component {
     });
   }
 
-  handleFilterMaps( filter_value ) {
+  handleSearchFilter( filter_value ) {
     var filtered_maps = [];
 
     for( var i=0; i < this.state.all_maps_data.length; i++ ) {
