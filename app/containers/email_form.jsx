@@ -1,32 +1,36 @@
 import React from 'react';
-import { Row, Col, FormGroup, ControlLabel, Button, Alert } from 'react-bootstrap';
+import Reqwest from 'reqwest';
+import { Row, Col, FormGroup, Button } from 'react-bootstrap';
 
 class EmailForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      email: null
-    };
-
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.resetEmail = this.resetEmail.bind(this);
+    this.postEmail = this.postEmail.bind(this);
   }
 
-  resetEmail() {
-    this.setState({ email: null });
+  componentDidMount() {
+    const { email } = this.refs;
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    this.resetEmail();
 
     const { refs } = this;
     const email = refs.email.value;
     console.log(email);
+    this.postEmail(email);
+  }
 
-    this.setState({
-      email: email
+  postEmail(email) {
+    Reqwest({
+      url: ('/api/emails/' + email),
+      method: 'post',
+      data: { email: email },
+      success: function() {
+        console.log(email + ' added to list of subscribed emails.');
+      }
     });
   }
 
@@ -50,10 +54,6 @@ class EmailForm extends React.Component {
         </Row>
       </form>
     );
-  }
-
-  componentDidMount() {
-    const { email } = this.refs;
   }
 
   render() {
