@@ -36,9 +36,9 @@ class EmailForm extends React.Component {
 
   renderForm() {
     return (
-      <form className="CardForm" onSubmit={ this.handleSubmit }>
-        <Row>
-          <Col xs={ 9 }>
+      <form className="col-xs-12" onSubmit={ this.handleSubmit }>
+        <div className="col-xs-12">
+          <Col xs={ 8 }>
             <FormGroup>
               <input
                 className="form-control text-center"
@@ -48,17 +48,17 @@ class EmailForm extends React.Component {
               />
             </FormGroup>
           </Col>
-          <Col xs={ 3 }>
+          <Col xs={ 4 }>
             <Button type="submit" bsStyle="primary" block>Submit</Button>
           </Col>
-        </Row>
+        </div>
       </form>
     );
   }
 
   render() {
     return (
-      <div className="email-form">
+      <div className="email-form col-xs-12">
         { this.renderForm() }
       </div>
     );

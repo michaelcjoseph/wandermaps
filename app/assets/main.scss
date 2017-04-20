@@ -39,3 +39,49 @@ p, h4, h5, h6, a {
 }
 
 /* Reusable Classes */
+
+.header-height {
+  height: 50px;
+}
+
+.top-zindex {
+  z-index: 100;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.right-align {
+  float: right;
+}
+
+.all-padding10 {
+  padding: 10px;
+}
+
+.side-padding10 {
+  padding: 0px 10px;
+}
+
+/* Search Bar */
+
+.search-bar {
+  display: flex;
+  padding: 0 1em;
+}
+
+.search-input {
+  margin: 0;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  outline: none !important;
+  box-shadow: none !important;
+  font-family: inherit;
+  padding: 6px;
+}
