@@ -1,13 +1,13 @@
 import React from 'react';
-
 import Header from './Header.jsx';
 import Title from './title.jsx';
 import SearchBar from './search_bar.jsx';
 import MapsList from './maps_list.jsx';
+var map_background = require('../assets/images/world_map_light_gray.svg');
 
 const Home = (props) => {
-  const getSectionClasses = () => {
-    return "col-xs-12 col-md-6 col-lg-6";
+  const getSectionGridClasses = () => {
+    return "col-xs-12 col-md-6 col-lg-6 ";
   };
 
   const getSectionStyle = () => {
@@ -16,11 +16,14 @@ const Home = (props) => {
 
   return (
     <div className="col-xs-12">
-      <div className={getSectionClasses()} style={getSectionStyle()}>
+      <div className={getSectionGridClasses()} style={getSectionStyle()}>
         <Header />
         <Title />
+        <div className="width100 position-absolute map-background">
+          <img className="width100 position-relative background-svg" src={map_background} alt="World Map"/>
+        </div>
       </div>
-      <div className={getSectionClasses()}>
+      <div className={getSectionGridClasses()}>
         <SearchBar 
           search_value={props.search_value} 
           handleSearch={props.handleSearch} />
