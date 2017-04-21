@@ -1,6 +1,6 @@
 /* Imports */
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Source+Sans+Pro:200,300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Source+Sans+Pro:300,400,600,700');
 
 /* Variables */
 
@@ -91,6 +91,10 @@ a {
   position: absolute;
 }
 
+.position-fixed {
+  position: fixed;
+}
+
 .right-align {
   float: right;
 }
@@ -135,6 +139,18 @@ a {
   overflow: hidden;
 }
 
+.fat-font {
+  font-weight: 700;
+}
+
+.medium-fat-font {
+  font-weight: 600;
+}
+
+.thin-font {
+  font-weight: 300;
+}
+
 /**** First Section ****/
 
 /* Header Bar */
@@ -172,6 +188,7 @@ a {
   height: auto;
   top: 50%;
   left: 50%;
+  opacity: 0.3;
 }
 
 .background-svg {
@@ -184,7 +201,6 @@ a {
 
 .search-bar {
   padding: 18px;
-  position: fixed;
   background-color: rgb(255, 255, 255);
 }
 
@@ -201,7 +217,7 @@ a {
 
 /* Map Lists */
 
-.maps-list {
+.maps-list-padding {
   padding-top: 70px;
 }
 

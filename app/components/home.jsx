@@ -6,12 +6,16 @@ import MapsList from './maps_list.jsx';
 var map_background = require('../assets/images/world_map.svg');
 
 const Home = (props) => {
+  const isMobile = () => {
+    return props.window_width <= 700
+  };
+
   const getSectionGridClasses = () => {
     return " col-xs-12 col-md-6 col-lg-6 ";
   };
 
   const getSectionStyle = () => {
-    return { height: window.innerHeight + 'px' };
+    return { height: props.window_height + 'px' };
   };
 
   return (
@@ -25,11 +29,12 @@ const Home = (props) => {
           </div>
         </div>
       </div>
-      <div className={"overflow-scroll" + getSectionGridClasses()} style={getSectionStyle()}>
+      <div className={(isMobile() ? "" : "overflow-scroll") + getSectionGridClasses()} style={getSectionStyle()}>
         <SearchBar 
+          is_mobile={isMobile()}
           search_value={props.search_value} 
           handleSearch={props.handleSearch} />
-        <MapsList maps_data={props.maps_data} />
+        <MapsList is_mobile={isMobile()} maps_data={props.maps_data} />
       </div>
     </div>
   );
