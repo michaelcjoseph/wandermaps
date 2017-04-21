@@ -16,11 +16,13 @@ const Home = (props) => {
 
   return (
     <div className="col-xs-12">
-      <div className={getSectionGridClasses()} style={getSectionStyle()}>
+      <div className={"center-align first-section " + getSectionGridClasses()} style={getSectionStyle()}>
         <Header />
-        <Title />
-        <div className="width100 position-absolute map-background">
-          <img className="width100 position-relative background-svg" src={map_background} alt="World Map"/>
+        <div className="width100 height100 position-absolute title-section col-xs-12">
+          <Title />
+          <div className="width100 position-absolute center-align map-background">
+            <img className="width100 position-relative background-svg" src={map_background} alt="World Map"/>
+          </div>
         </div>
       </div>
       <div className={getSectionGridClasses()}>

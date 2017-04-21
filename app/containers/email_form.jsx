@@ -39,7 +39,7 @@ class EmailForm extends React.Component {
       <form className="col-xs-12" onSubmit={ this.handleSubmit }>
         <div className="col-xs-12">
           <Col xs={ 8 }>
-            <FormGroup>
+            <FormGroup className="margin0">
               <input
                 className="form-control text-center"
                 type="text"
@@ -49,7 +49,7 @@ class EmailForm extends React.Component {
             </FormGroup>
           </Col>
           <Col xs={ 4 }>
-            <Button type="submit" bsStyle="primary" block>Submit</Button>
+            <Button type="submit" bsStyle="primary" block>Subscribe</Button>
           </Col>
         </div>
       </form>

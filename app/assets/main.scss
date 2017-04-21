@@ -41,7 +41,7 @@ p, h4, h5, h6, a {
 /* Reusable Classes */
 
 .header-height {
-  height: 50px;
+  height: 100px;
 }
 
 .top-zindex {
@@ -56,6 +56,10 @@ p, h4, h5, h6, a {
   width: 100%;
 }
 
+.height100 {
+  height: 100%;
+}
+
 .position-relative {
   position: relative;
 }
@@ -68,12 +72,71 @@ p, h4, h5, h6, a {
   float: right;
 }
 
-.all-padding10 {
-  padding: 10px;
+.center-align {
+  text-align: center;
 }
 
-.side-padding10 {
-  padding: 0px 10px;
+.display-flex {
+  display: flex;
+}
+
+.flex-vertically-center {
+  // To be used in conjuction with display-flex
+
+  align-items: center;
+}
+
+.flex-horizontally-center {
+  // To be used in conjuction with display-flex
+
+  justify-content: center;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.margin0 {
+  margin: 0;
+}
+
+/**** First Section ****/
+
+.first-section {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+/* Header Bar */
+
+.header-nav {
+  background-color: rgb(159, 210, 236);
+  color: rgb(23, 55, 81);
+  box-shadow: 0 1px 3px 2px rgba(0,0,0,0.15);
+  padding: 1em;
+}
+
+.header-text {
+  font-size: 1.2em;
+  margin-bottom: 0;
+  margin-right: 1em;
+}
+
+/* Title Section */
+
+.title-section {
+  top: 0;
+  z-index: 99;
+}
+
+.title {
+  box-sizing: border-box;
+  top: 50%;
+  z-index: 1000;
+  transform: translateY(-50%);
 }
 
 /* Map Background */
@@ -89,13 +152,13 @@ p, h4, h5, h6, a {
   max-height: 100%;
   bottom: 0;
   left: 0;
-  margin-bottom: -2px;
 }
+
+/**** Second Section ****/
 
 /* Search Bar */
 
 .search-bar {
-  display: flex;
   padding: 0 1em;
 }
 
@@ -107,5 +170,5 @@ p, h4, h5, h6, a {
   outline: none !important;
   box-shadow: none !important;
   font-family: inherit;
-  padding: 6px;
+  padding: 0.45em;
 }

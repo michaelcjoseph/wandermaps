@@ -3,9 +3,14 @@ import EmailForm from '../containers/email_form.jsx';
 
 const Header = (props) => {
   return (
-    <header className="height-height top-zindex position-relative col-xs-12">
-      <div className="right-align col-xs-4">
-        <EmailForm />
+    <header className="header-nav top-zindex position-relative col-xs-12">
+      <div className="center-align display-flex flex-vertically-center flex-horizontally-center">
+        <div className="position-relative">
+          <p className="header-text"><strong>Don't miss out! Get updates on cities!</strong></p>
+        </div>
+        <div className="position-relative">
+          <EmailForm />
+        </div>
       </div>
     </header>
   );
