@@ -7,7 +7,7 @@ const SearchBar = (props) => {
   };
 
   return (
-    <div className={"search-bar width100 top-zindex display-flex flex-vertically-center " + isPositionFixed()}>
+    <div className={"search-bar width100 zindex10 display-flex flex-vertically-center " + isPositionFixed()}>
       <i className="fa fa-search fa-2x"></i>
       <FormGroup className="width100 margin0">
         <FormControl

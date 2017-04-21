@@ -20,8 +20,8 @@ const Home = (props) => {
 
   return (
     <div className="col-xs-12">
+      <Header />
       <div className={"center-align position0 overflow-hidden" + getSectionGridClasses()} style={getSectionStyle()}>
-        <Header />
         <div className="title-section top0 width100 height100 position-absolute col-xs-12">
           <Title />
           <div className="map-background width100 position-absolute center-align">
