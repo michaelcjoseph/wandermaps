@@ -38,6 +38,10 @@ p, h4, h5, h6, a {
   padding-right: 0px;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Reusable Classes */
 
 .top-zindex {
@@ -46,6 +50,29 @@ p, h4, h5, h6, a {
 
 .bottom-zindex {
   z-index: 1;
+}
+
+.position0 {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.top0 {
+  top: 0;
+}
+
+.bottom0 {
+  bottom: 0;
+}
+
+.left0 {
+  left: 0;
+}
+
+.right0 {
+  right: 0;
 }
 
 .width100 {
@@ -72,6 +99,14 @@ p, h4, h5, h6, a {
   text-align: center;
 }
 
+.display-block {
+  display: block;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
 .display-flex {
   display: flex;
 }
@@ -88,23 +123,15 @@ p, h4, h5, h6, a {
   justify-content: center;
 }
 
-.display-inline-block {
-  display: inline-block;
-}
-
 .margin0 {
   margin: 0;
 }
 
-/**** First Section ****/
-
-.first-section {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.overflow-hidden {
   overflow: hidden;
 }
+
+/**** First Section ****/
 
 /* Header Bar */
 
@@ -124,7 +151,6 @@ p, h4, h5, h6, a {
 /* Title Section */
 
 .title-section {
-  top: 0;
   z-index: 99;
 }
 
@@ -146,8 +172,6 @@ p, h4, h5, h6, a {
 
 .background-svg {
   max-height: 100%;
-  bottom: 0;
-  left: 0;
 }
 
 /**** Second Section ****/
@@ -167,4 +191,21 @@ p, h4, h5, h6, a {
   box-shadow: none !important;
   font-family: inherit;
   padding: 0.45em;
+}
+
+/* Map Lists */
+
+/* Map Item */
+
+.map-item-img {
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.map-item-text {
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
 }

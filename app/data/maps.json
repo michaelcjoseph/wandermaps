@@ -3,30 +3,35 @@
     "id": "tokyo-japan",
     "city": "Tokyo",
     "country": "Japan",
-    "url": "https://drive.google.com/open?id=1VOO_N05PoN4tORmmN0x1BlLTVtM&usp=sharing"
+    "url": "https://drive.google.com/open?id=1VOO_N05PoN4tORmmN0x1BlLTVtM&usp=sharing",
+    "image": "tokyo.png"
   },
   {
     "id": "kyoto-japan",
     "city": "Kyoto",
     "country": "Japan",
-    "url": "https://drive.google.com/open?id=1LOW4uwhv_Iuo7AWqGN6sg6eRtR8&usp=sharing"
+    "url": "https://drive.google.com/open?id=1LOW4uwhv_Iuo7AWqGN6sg6eRtR8&usp=sharing",
+    "image": "kyoto.png"
   },
   {
     "id": "hiroshima-japan",
     "city": "Hiroshima",
     "country": "Japan",
-    "url": "https://drive.google.com/open?id=1lf_lEcohCS4uroEd49ZzOPXql_Q&usp=sharing"
+    "url": "https://drive.google.com/open?id=1lf_lEcohCS4uroEd49ZzOPXql_Q&usp=sharing",
+    "image": "hiroshima.png"
   },
   {
     "id": "madrid-spain",
     "city": "Madrid",
     "country": "Spain",
-    "url": "https://drive.google.com/open?id=1tIoy0RMCdOF4hM_bQ9Pgy5Htzys&usp=sharing"
+    "url": "https://drive.google.com/open?id=1tIoy0RMCdOF4hM_bQ9Pgy5Htzys&usp=sharing",
+    "image": "madrid.png"
   },
   {
     "id": "barcelona-spain",
     "city": "Barcelona",
     "country": "Spain",
-    "url": "https://drive.google.com/open?id=11yW3mQjE51waAR7s-m3a3ofEjkc&usp=sharing"
+    "url": "https://drive.google.com/open?id=11yW3mQjE51waAR7s-m3a3ofEjkc&usp=sharing",
+    "image": "barcelona.png"
   }
 ]
