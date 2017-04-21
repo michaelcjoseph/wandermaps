@@ -7,7 +7,7 @@ var map_background = require('../assets/images/world_map_light_gray.svg');
 
 const Home = (props) => {
   const getSectionGridClasses = () => {
-    return "col-xs-12 col-md-6 col-lg-6 ";
+    return " col-xs-12 col-md-6 col-lg-6 ";
   };
 
   const getSectionStyle = () => {
@@ -16,7 +16,7 @@ const Home = (props) => {
 
   return (
     <div className="col-xs-12">
-      <div className={"center-align position0 overflow-hidden " + getSectionGridClasses()} style={getSectionStyle()}>
+      <div className={"center-align position0 overflow-hidden" + getSectionGridClasses()} style={getSectionStyle()}>
         <Header />
         <div className="title-section top0 width100 height100 position-absolute col-xs-12">
           <Title />
@@ -25,7 +25,7 @@ const Home = (props) => {
           </div>
         </div>
       </div>
-      <div className={getSectionGridClasses()}>
+      <div className={"overflow-scroll" + getSectionGridClasses()} style={getSectionStyle()}>
         <SearchBar 
           search_value={props.search_value} 
           handleSearch={props.handleSearch} />

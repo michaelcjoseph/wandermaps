@@ -127,6 +127,10 @@ a {
   margin: 0;
 }
 
+.overflow-scroll {
+  overflow: scroll;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -139,7 +143,7 @@ a {
   background-color: rgb(159, 210, 236);
   color: rgb(23, 55, 81);
   box-shadow: 0 1px 3px 2px rgba(0,0,0,0.15);
-  padding: 1em;
+  padding: 18px;
 }
 
 .header-text {
@@ -179,7 +183,9 @@ a {
 /* Search Bar */
 
 .search-bar {
-  padding: 1.25em;
+  padding: 18px;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
 }
 
 .search-input {
@@ -194,6 +200,10 @@ a {
 }
 
 /* Map Lists */
+
+.maps-list {
+  padding-top: 70px;
+}
 
 /* Map Item */
 

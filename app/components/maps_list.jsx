@@ -9,7 +9,7 @@ const MapsList = (props) => {
   }
 
   return (
-    <div className="col-xs-12">
+    <div className="maps-list col-xs-12">
       {props.maps_data.map(renderMapItem)}
     </div>
   );
