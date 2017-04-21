@@ -3,7 +3,7 @@ import MapItem from './map_item.jsx';
 
 const MapsList = (props) => {
   const searchBarFixedPadding = () => {
-    return props.is_mobile ? "" : "maps-list-padding";
+    return props.is_mobile ? "" : "padding-for-header";
   };
 
   const renderMapItem = (item, i) => {

@@ -157,6 +157,10 @@ a {
   font-weight: 300;
 }
 
+.padding-for-header {
+  padding-top: 70px;
+}
+
 /**** First Section ****/
 
 /* Header Bar */
@@ -203,11 +207,38 @@ a {
 
 /**** Second Section ****/
 
+.second-section-border {
+  border-style: solid;
+  border-color: #E5E5E5;
+  border-left-width: 3px;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+}
+
 /* Search Bar */
 
 .search-bar {
   padding: 18px;
   background-color: $body-background-color;
+}
+
+.search-bar-border {
+  border-style: solid;
+  border-color: #E5E5E5;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 3px;
+}
+
+.search-bar-border-mobile {
+  border-style: solid;
+  border-color: #E5E5E5;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 3px;
+  border-bottom-width: 3px;
 }
 
 .search-input {
@@ -233,7 +264,10 @@ a {
   background-color: rgba(0, 0, 0, 0.8);
   border-style: solid;
   border-color: $body-background-color;
-  border-width: 1px;
+  border-right-width: 2px;
+  border-left-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 2px;
 }
 
 .map-item:hover {

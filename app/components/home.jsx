@@ -7,7 +7,7 @@ var map_background = require('../assets/images/world_map.svg');
 
 const Home = (props) => {
   const isMobile = () => {
-    return props.window_width <= 768
+    return props.window_width <= 991
   };
 
   const getSectionGridClasses = () => {
@@ -29,7 +29,7 @@ const Home = (props) => {
           </div>
         </div>
       </div>
-      <div className={(isMobile() ? "" : "overflow-scroll") + getSectionGridClasses()} style={getSectionStyle()}>
+      <div className={(isMobile() ? "" : "overflow-scroll padding-for-header second-section-border") + getSectionGridClasses()} style={getSectionStyle()}>
         <SearchBar 
           is_mobile={isMobile()}
           search_value={props.search_value} 

@@ -2,12 +2,12 @@ import React from 'react';
 import {FormGroup, FormControl} from 'react-bootstrap';
 
 const SearchBar = (props) => {
-  const isPositionFixed = () => {
-    return props.is_mobile ? "" : "position-fixed";
+  const isMobileClasses = () => {
+    return props.is_mobile ? "search-bar-border-mobile" : "search-bar-border position-fixed";
   };
 
   return (
-    <div className={"search-bar width100 zindex10 display-flex flex-vertically-center " + isPositionFixed()}>
+    <div className={"search-bar width100 zindex10 display-flex flex-vertically-center " + isMobileClasses()}>
       <i className="fa fa-search fa-2x"></i>
       <FormGroup className="width100 margin0">
         <FormControl
