@@ -3,7 +3,7 @@ import Header from './Header.jsx';
 import Title from './title.jsx';
 import SearchBar from './search_bar.jsx';
 import MapsList from './maps_list.jsx';
-var map_background = require('../assets/images/world_map_light_gray.svg');
+var map_background = require('../assets/images/world_map.svg');
 
 const Home = (props) => {
   const getSectionGridClasses = () => {
