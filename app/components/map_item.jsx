@@ -12,8 +12,8 @@ const MapItem = (props) => {
         <img className="map-item-img position-relative display-inline-block left0" src={getImageUrl()} alt={props.item.city}/>
       </div>
       <div className="map-item-text position-absolute center-align width100 bottom-zindex">
-        <h1>{props.item.city}</h1>
-        <h3>{props.item.country}</h3>
+        <h1 className="fat-font">{props.item.city}</h1>
+        <h4 className="thin-font">{props.item.country}</h4>
       </div>
     </a>
   );

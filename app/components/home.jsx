@@ -7,11 +7,11 @@ var map_background = require('../assets/images/world_map.svg');
 
 const Home = (props) => {
   const isMobile = () => {
-    return props.window_width <= 700
+    return props.window_width <= 768
   };
 
   const getSectionGridClasses = () => {
-    return " col-xs-12 col-md-6 col-lg-6 ";
+    return " col-xs-12 col-sm-12 col-md-6 col-lg-6 ";
   };
 
   const getSectionStyle = () => {

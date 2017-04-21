@@ -7,11 +7,13 @@
 $font-stack: 'Source Sans Pro', 'Open Sans', sans-serif;
 $header-font: 'Source Sans Pro', sans-serif;
 $body-font: 'Open Sans', sans-serif;
+$body-background-color: rgb(255,255,255);
 
 /* Bootstrap Customization */
 
 body {
   font-family: $font-stack;
+  background-color: $body-background-color;
 }
 
 h1, h2, h3 {
@@ -201,7 +203,7 @@ a {
 
 .search-bar {
   padding: 18px;
-  background-color: rgb(255, 255, 255);
+  background-color: $body-background-color;
 }
 
 .search-input {
@@ -226,7 +228,7 @@ a {
 .map-item {
   background-color: rgba(0, 0, 0, 0.8);
   border-style: solid;
-  border-color: rgb(255, 255, 255);
+  border-color: $body-background-color;
   border-width: 1px;
 }
 
