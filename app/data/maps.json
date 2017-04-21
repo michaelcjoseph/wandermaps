@@ -33,5 +33,40 @@
     "country": "Spain",
     "url": "https://drive.google.com/open?id=11yW3mQjE51waAR7s-m3a3ofEjkc&usp=sharing",
     "image": "barcelona.png"
+  },
+  {
+    "id": "malaga-spain",
+    "city": "Malaga",
+    "country": "Spain",
+    "url": "https://drive.google.com/open?id=1XFkPB43NYA1ovkeJlToOgWhI7hU&usp=sharing",
+    "image": "malaga.png"
+  },
+  {
+    "id": "california-pch-usa",
+    "city": "California PCH",
+    "country": "USA",
+    "url": "https://drive.google.com/open?id=1Cf6BHoogaDTtmsfVupnVT3Fq0nw&usp=sharing",
+    "image": "pch.png"
+  },
+  {
+    "id": "london-united-kingdom",
+    "city": "London",
+    "country": "United Kingdom",
+    "url": "https://drive.google.com/open?id=1rniyhYQO9E1aDFDupeFC5y9M7Qg&usp=sharing",
+    "image": "london.png"
+  },
+  {
+    "id": "paris-france",
+    "city": "Paris",
+    "country": "France",
+    "url": "https://drive.google.com/open?id=1V8ghMbN6-6gmAid1iJOg1WJrobI&usp=sharing",
+    "image": "paris.png"
+  },
+  {
+    "id": "copenhagen-denmark",
+    "city": "Copenhagen",
+    "country": "Denmark",
+    "url": "https://drive.google.com/open?id=1awrgCyiU_BdXohL4CwRlr0b7kB0&usp=sharing",
+    "image": "copenhagen.png"
   }
 ]
