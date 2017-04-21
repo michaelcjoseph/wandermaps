@@ -3,9 +3,9 @@ import {FormGroup, FormControl} from 'react-bootstrap';
 
 const SearchBar = (props) => {
   return (
-    <div className="header-height top-zindex search-bar display-flex col-xs-12">
+    <div className="top-zindex search-bar display-flex flex-vertically-center">
       <i className="fa fa-search fa-2x"></i>
-      <FormGroup className="width100">
+      <FormGroup className="width100 margin0">
         <FormControl
           type="text"
           className="search-input"
