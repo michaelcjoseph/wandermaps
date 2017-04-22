@@ -8,7 +8,7 @@ const MapsList = (props) => {
 
   const renderMapItem = (item, i) => {
     return (
-      <MapItem key={i} item={item} />
+      <MapItem key={i} item={item} is_mobile={props.is_mobile} />
     )
   };
 

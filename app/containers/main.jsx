@@ -62,8 +62,8 @@ class Main extends React.Component {
       <div>
         {React.cloneElement(
           this.props.children, {
-            window_width: this.state.window_width,
             window_height: this.state.window_height,
+            is_mobile: (this.state.window_width <= 991),
             maps_data: this.state.filtered_maps_data,
             search_value: this.state.search_value,
             handleSearch: this.handleSearch

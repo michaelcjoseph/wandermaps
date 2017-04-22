@@ -254,17 +254,25 @@ a {
 
 /* Map Lists */
 
-.maps-list-padding {
-  padding-top: 70px;
-}
-
 /* Map Item */
 
 .map-item {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.map-item-border {
   border-style: solid;
   border-color: $body-background-color;
   border-right-width: 2px;
+  border-left-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 2px;
+}
+
+.map-item-border-mobile {
+  border-style: solid;
+  border-color: $body-background-color;
+  border-right-width: 0px;
   border-left-width: 0px;
   border-top-width: 0px;
   border-bottom-width: 2px;

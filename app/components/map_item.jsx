@@ -6,8 +6,15 @@ const MapItem = (props) => {
     return image;
   }
 
+  const getMapItemBorder = () => {
+    return props.is_mobile ? "map-item-border-mobile" : "map-item-border";
+  }
+
   return (
-    <a className="map-item display-block position-relative overflow-hidden center-align col-xs-12 col-md-6" href={props.item.url} target="_blank">
+    <a 
+      className={"map-item display-block position-relative overflow-hidden center-align col-xs-12 col-md-6 " + getMapItemBorder()} 
+      href={props.item.url} 
+      target="_blank" >
       <div className="position-relative position0">
         <img className="map-item-img position-relative display-inline-block left0" src={getImageUrl()} alt={props.item.city}/>
       </div>
