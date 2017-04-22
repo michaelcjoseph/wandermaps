@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import Header from './Header.jsx';
 import Title from './title.jsx';
 import SearchBar from './search_bar.jsx';
@@ -17,8 +18,16 @@ const Home = (props) => {
   const getDownArrow = () => {
     return (
       <div className="down-arrow position-absolute width100 center-align">
-        <i className="fa fa-chevron-circle-down fa-3x"></i>
+        <Link to="/#maps">
+          <i className="fa fa-chevron-circle-down fa-3x"></i>
+        </Link>
       </div>
+    )
+  }
+
+  const getMobileSectionPadding = () => {
+    return(
+      <div className="padding-for-header"></div>
     )
   }
 
@@ -34,7 +43,11 @@ const Home = (props) => {
           </div>
         </div>
       </div>
-      <div className={(props.is_mobile ? "" : "overflow-scroll padding-for-header second-section-border") + getSectionGridClasses()} style={getSectionStyle()}>
+      <div 
+        id="maps"
+        className={(props.is_mobile ? "" : "overflow-scroll padding-for-header second-section-border") + getSectionGridClasses()} 
+        style={getSectionStyle()} >
+        {props.is_mobile ? getMobileSectionPadding() : null}
         <SearchBar 
           is_mobile={props.is_mobile}
           search_value={props.search_value} 

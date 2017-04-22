@@ -14,7 +14,7 @@ const SearchBar = (props) => {
           type="text"
           className="search-input"
           value={props.search_value}
-          placeholder="Enter text"
+          placeholder="Search Maps"
           onChange={props.handleSearch}
         />
       </FormGroup>
