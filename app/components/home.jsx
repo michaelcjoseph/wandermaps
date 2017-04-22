@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import Header from './Header.jsx';
+import Header from './header.jsx';
 import Title from './title.jsx';
 import SearchBar from './search_bar.jsx';
 import MapsList from './maps_list.jsx';
