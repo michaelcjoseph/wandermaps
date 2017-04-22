@@ -4,7 +4,7 @@
   "description": "Google Maps for different cities with things to do/see/eat",
   "main": "index.js",
   "scripts": {
-    "start": "npm build && node dist/app.js",
+    "start": "npm run build && node dist/app.js",
     "build": "webpack -p --config ./webpack.config.js --progress --colors",
     "devserve": "webpack-dev-server --progress --colors"
   },
