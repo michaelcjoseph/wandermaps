@@ -4,7 +4,7 @@ const webpack = require("webpack");
 const debug = process.env.NODE_ENV !== "production";
 
 module.exports = {
-  devtool: debug ? "eval" : "cheap-module-source-map",
+  devtool: debug ? "eval" : "",
   entry: path.join(__dirname, "app", "index.jsx"),
   devServer: {
     inline: true,
