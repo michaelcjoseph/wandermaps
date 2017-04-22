@@ -14,12 +14,21 @@ const Home = (props) => {
     return { height: props.window_height + 'px' };
   };
 
+  const getDownArrow = () => {
+    return (
+      <div className="down-arrow position-absolute width100 center-align">
+        <i className="fa fa-chevron-circle-down fa-3x"></i>
+      </div>
+    )
+  }
+
   return (
     <div className="col-xs-12">
       <Header />
       <div className={"center-align position0 overflow-hidden" + getSectionGridClasses()} style={getSectionStyle()}>
         <div className="title-section top0 width100 height100 position-absolute col-xs-12">
           <Title />
+          {props.is_mobile ? getDownArrow() : null}
           <div className="map-background width100 position-absolute center-align">
             <img className="background-svg width100 position-relative bottom0 left0" src={map_background} alt="World Map"/>
           </div>
