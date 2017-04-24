@@ -10,6 +10,13 @@ module.exports = {
     const emailsJsonPath = path.join(__dirname, 'emails.json');
 
     app.use(publicPath);
+
+    app.get('*.js', function (request, response, next) {
+      request.url = request.url + '.gz';
+      response.set('Content-Encoding', 'gzip');
+      next();
+    });
+
     app.get('/', (request, response) => { 
       response.sendFile(indexPath) 
     });
