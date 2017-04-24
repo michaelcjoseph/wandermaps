@@ -7,7 +7,7 @@ const Title = (props) => {
       <div className="title position-absolute center-align col-xs-12">
         <img className="title-logo" src={logo} alt="Wander Maps" />
         <h4 className="title-subtext thin-font">
-          City guides crowdsourced from blogs, locals, travelers, and You*
+          City guides crowdsourced from locals, travelers, blogs, and You*
         </h4>
       </div>
       <div className="title-desc position-absolute">
