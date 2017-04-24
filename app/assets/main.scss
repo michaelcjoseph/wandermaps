@@ -161,14 +161,6 @@ a {
   font-weight: 300;
 }
 
-.padding-for-header {
-  padding-top: 70px;
-}
-
-.padding-for-header-mobile {
-  padding-top: 93px;
-}
-
 /**** First Section ****/
 
 /* Header Bar */
@@ -184,6 +176,14 @@ a {
   font-size: 1.2em;
   margin-bottom: 0;
   margin-right: 1em;
+}
+
+.padding-for-header {
+  padding-top: 70px;
+}
+
+.padding-for-header-mobile {
+  padding-top: 93px;
 }
 
 /* Title Section */
@@ -203,6 +203,17 @@ a {
   width: 50%;
 }
 
+.title-subtext {
+  padding: 0 25px;
+}
+
+.title-desc {
+  top: 85%;
+  text-align: left;
+  font-size: 0.9em;
+  padding: 0 25px;
+}
+
 .down-arrow {
   top: 90%;
 }
@@ -214,7 +225,7 @@ a {
   height: auto;
   top: 50%;
   left: 50%;
-  opacity: 0.3;
+  opacity: 0.25;
 }
 
 .background-svg {
