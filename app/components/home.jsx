@@ -27,7 +27,7 @@ const Home = (props) => {
 
   const getMobileSectionPadding = () => {
     return(
-      <div className="padding-for-header"></div>
+      <div className="padding-for-header-mobile"></div>
     )
   }
 
