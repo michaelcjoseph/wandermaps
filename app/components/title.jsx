@@ -13,7 +13,7 @@ const Title = (props) => {
       <div className="title-desc position-absolute">
         <p className="thin-font">
           *Help contribute to our community! All general city maps are openly 
-          editable so that you can add new spots or notes to make the next 
+          editable so that you can add new places or notes to make the next 
           person's experience in that city all the better.
         </p>
       </div>
