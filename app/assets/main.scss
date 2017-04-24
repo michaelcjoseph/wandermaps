@@ -133,6 +133,10 @@ a {
   justify-content: center;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .margin0 {
   margin: 0;
 }
@@ -159,6 +163,10 @@ a {
 
 .padding-for-header {
   padding-top: 70px;
+}
+
+.padding-for-header-mobile {
+  padding-top: 93px;
 }
 
 /**** First Section ****/
@@ -189,6 +197,10 @@ a {
   top: 50%;
   z-index: 1000;
   transform: translateY(-50%);
+}
+
+.title-logo {
+  width: 50%;
 }
 
 .down-arrow {
