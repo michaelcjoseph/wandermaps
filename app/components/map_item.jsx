@@ -11,6 +11,14 @@ const MapItem = (props) => {
     return props.is_mobile ? "map-item-border-mobile" : "map-item-border";
   }
 
+  const getComingSoon = () => {
+    if (props.item.url.length > 0) {
+      return "";
+    } else {
+      return " (Coming Soon)";
+    }
+  }
+
   return (
     <Link to={"/" + props.item.id} >
       <div className={"map-item display-block position-relative overflow-hidden center-align col-xs-12 col-md-6 " + getMapItemBorder()} >
@@ -19,6 +27,7 @@ const MapItem = (props) => {
         </div>
         <div className="map-item-text position-absolute center-align width100 zindex1">
           <h1 className="fat-font">{props.item.city}</h1>
+          <h4 className="thin-font">{getComingSoon()}</h4>
           <h4 className="thin-font">{props.item.country}</h4>
         </div>
       </div>

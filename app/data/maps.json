@@ -68,5 +68,103 @@
     "country": "Denmark",
     "url": "https://www.google.com/maps/d/u/0/embed?mid=1-YmOvw1XvsZqQyVQ801OOTeSjo0",
     "image": "copenhagen.png"
+  },
+  {
+    "id": "atlanta-usa",
+    "city": "Atlanta",
+    "country": "USA",
+    "url": "",
+    "image": "atlanta.png"
+  },
+  {
+    "id": "austin-usa",
+    "city": "Austin",
+    "country": "USA",
+    "url": "",
+    "image": "austin.png"
+  },
+  {
+    "id": "chicago-usa",
+    "city": "Chicago",
+    "country": "USA",
+    "url": "",
+    "image": "chicago.png"
+  },
+  {
+    "id": "denver-usa",
+    "city": "Denver",
+    "country": "USA",
+    "url": "",
+    "image": "denver.png"
+  },
+  {
+    "id": "granada-spain",
+    "city": "Granada",
+    "country": "Spain",
+    "url": "",
+    "image": "granada.png"
+  },
+  {
+    "id": "los-angeles-usa",
+    "city": "Los Angeles",
+    "country": "USA",
+    "url": "",
+    "image": "los_angeles.png"
+  },
+  {
+    "id": "new-york-usa",
+    "city": "New York",
+    "country": "USA",
+    "url": "",
+    "image": "new_york.png"
+  },
+  {
+    "id": "portland-usa",
+    "city": "Portland",
+    "country": "USA",
+    "url": "",
+    "image": "portland.png"
+  },
+  {
+    "id": "quito-ecuador",
+    "city": "Quito",
+    "country": "Ecuador",
+    "url": "",
+    "image": "quito.png"
+  },
+  {
+    "id": "rio-de-janeiro-brazil",
+    "city": "Rio de Janeiro",
+    "country": "Brazil",
+    "url": "",
+    "image": "rio_de_janeiro.png"
+  },
+  {
+    "id": "san-francisco-usa",
+    "city": "San Francisco",
+    "country": "USA",
+    "url": "",
+    "image": "san_francisco.png"
+  },
+  {
+    "id": "seatle-usa",
+    "city": "Seattle",
+    "country": "USA",
+    "url": "",
+    "image": "seattle.png"
+  },
+  {
+    "id": "seville-spain",
+    "city": "Seville",
+    "country": "Spain",
+    "url": "",
+    "image": "seville.png"
+  },
+  {
+    "id": "washington-dc-usa",
+    "city": "Washington D.C.",
+    "country": "USA",
+    "url": "",
+    "image": "washington_dc.png"
   }
 ]
