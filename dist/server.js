@@ -1,6 +1,6 @@
 const path = require('path');
 const express = require('express');
-var fs = require('fs');
+var nodemailer = require('nodemailer');
 
 module.exports = {
   app: function () {
@@ -16,15 +16,30 @@ module.exports = {
     });
 
     app.post('/api/emails/:email', (request, response) => {
-      fs.readFile(emailsJsonPath, 'utf8', function readFileCallback(err, data){
-        if (err) {
-          console.log(err);
+      var transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth: {
+          user: 'michael.c.joseph.12@gmail.com', // Your email id
+          pass: 'YoFool*90' // Your password
+        }
+      });
+
+      var text = 'New email added to Wander Maps: ' + request.params.email;
+
+      var mailOptions = {
+        from: 'michael.c.joseph.12@gmail.com', 
+        to: 'mjoseph.cm@gmail.com', 
+        subject: 'New Wander Maps Subscriber!', 
+        text: text 
+      };
+
+      transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
         } else {
-        obj = JSON.parse(data); //now its an object
-        obj.push(request.params.email); //add some data
-        json = JSON.stringify(obj); //convert it back to json
-        fs.writeFile(emailsJsonPath, json, 'utf8'); // write it back 
-      }});
+          console.log('Message sent: ' + info.response);
+        };
+      });
 
       response.send(request.params);
     });
