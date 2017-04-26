@@ -3,7 +3,13 @@ import Header from './header.jsx';
 
 const CityMap = (props) => {
   const getFrameStyle = () => {
-    let header_height = document.getElementById('header').clientHeight;
+    const header = document.getElementById('header');
+
+    var header_height = props.is_mobile ? 93 : 70;
+
+    if (header) {
+      header_height = header.clientHeight
+    }
 
     return { 
       marginTop: header_height + 'px',

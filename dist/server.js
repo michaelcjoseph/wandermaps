@@ -1,6 +1,6 @@
-const path = require('path')
-const express = require('express')
-var fs = require('fs')
+const path = require('path');
+const express = require('express');
+var fs = require('fs');
 
 module.exports = {
   app: function () {
@@ -11,13 +11,7 @@ module.exports = {
 
     app.use(publicPath);
 
-    app.get('*.js', function (request, response, next) {
-      request.url = request.url + '.gz';
-      response.set('Content-Encoding', 'gzip');
-      next();
-    });
-
-    app.get('/', (request, response) => { 
+    app.get('*', (request, response) => { 
       response.sendFile(indexPath) 
     });
 
