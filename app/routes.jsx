@@ -8,7 +8,7 @@ import maps_data from './data/maps.json';
 
 const renderCityMapRoute = (city_map, i) => {
   return (
-    <Route key={i} path={city_map.id} component={CityMap} />
+    <Route key={i} city_map={city_map} path={"/" + city_map.id} component={CityMap} />
   )
 }
 
