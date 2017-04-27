@@ -1,5 +1,7 @@
 import React from 'react';
 import Header from './header.jsx';
+const logo = require('../assets/images/logo.svg');
+const map_background = require('../assets/images/world_map.svg');
 
 const CityMapView = (props) => {
   const getCityMapBodyStyle = () => {
@@ -26,8 +28,14 @@ const CityMapView = (props) => {
 
   const getCityMapUnavailable = () => {
     return (
-      <div className="col-xs-12 center-align">
-        <h3>
+      <div className="col-xs-12 center-align padding-for-header">
+        <div className="top0 width100 height100 col-xs-12">
+          <img className="no-city-map-logo" src={"/" + logo} alt="Wander Maps" />
+          <div className="map-background no-city-map-background width100 position-absolute center-align">
+            <img className="background-svg width100 position-relative bottom0 left0" src={"/" + map_background} alt="World Map"/>
+          </div>
+        </div>
+        <h3 className="padding-for-header col-xs-12">
           This map will be available soon! Subscribe above to be informed when 
           it is ready. 
         </h3>
@@ -42,7 +50,6 @@ const CityMapView = (props) => {
         back_button={true} 
         back_route={"/" + props.city_id} 
         paid={props.route.city_map_view.price ? true : false} />
-      {console.log(props.route.city_map_view.price ? true : false)}
       <div className={"col-xs-12 position0 " + getCityMapBodyClasses()} style={getCityMapBodyStyle()} >
         {getCityMapBody()}
       </div>
