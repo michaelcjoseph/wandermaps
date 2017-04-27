@@ -1,11 +1,11 @@
 import React from 'react';
 import Header from './header.jsx';
 
-const CityMap = (props) => {
+const CityMapView = (props) => {
   const getCityMapBodyStyle = () => {
     const header = document.getElementById('header');
 
-    var header_height = props.is_mobile ? 93 : 70;
+    var header_height = props.is_mobile ? 122 : 70;
 
     if (header) {
       header_height = header.clientHeight
@@ -18,7 +18,7 @@ const CityMap = (props) => {
   };
 
   const getCityMapBody = () => {
-    if (props.route.city_map.url.length > 0) {
+    if (props.route.city_map_view.url.length > 0) {
       return getCityMapFrame();
     } else {
       return getCityMapUnavailable();
@@ -27,7 +27,7 @@ const CityMap = (props) => {
 
   const getCityMapFrame = () => {
     return (
-      <iframe src={props.route.city_map.url} width="100%" height="100%"></iframe>
+      <iframe src={props.route.city_map_view.url} width="100%" height="100%"></iframe>
     )
   };
 
@@ -44,7 +44,11 @@ const CityMap = (props) => {
 
   return (
     <div className="col-xs-12">
-      <Header back_button={true} />
+      <Header 
+        email_form={true}
+        back_button={true} 
+        back_route={"/" + props.city_id} 
+        paid={props.route.city_map_view.price ? true : false} />
       <div className={"col-xs-12 position0"} style={getCityMapBodyStyle()} >
         {getCityMapBody()}
       </div>
@@ -52,4 +56,4 @@ const CityMap = (props) => {
   );
 }
 
-export default CityMap;
+export default CityMapView;

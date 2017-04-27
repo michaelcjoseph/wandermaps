@@ -25,15 +25,8 @@ const Home = (props) => {
     )
   }
 
-  const getMobileSectionPadding = () => {
-    return(
-      <div className="padding-for-header-mobile"></div>
-    )
-  }
-
   return (
     <div className="col-xs-12">
-      <Header />
       <div className={"center-align position0 overflow-hidden" + getSectionGridClasses()} style={getSectionStyle()}>
         <div className="title-section top0 width100 height100 position-absolute col-xs-12">
           <Title />
@@ -45,9 +38,8 @@ const Home = (props) => {
       </div>
       <div 
         id="maps"
-        className={(props.is_mobile ? "" : "overflow-scroll padding-for-header second-section-border") + getSectionGridClasses()} 
+        className={(props.is_mobile ? "" : "overflow-scroll second-section-border") + getSectionGridClasses()} 
         style={getSectionStyle()} >
-        {props.is_mobile ? getMobileSectionPadding() : null}
         <SearchBar 
           is_mobile={props.is_mobile}
           search_value={props.search_value} 

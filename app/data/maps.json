@@ -3,168 +3,768 @@
     "id": "tokyo-japan",
     "city": "Tokyo",
     "country": "Japan",
-    "url": "https://www.google.com/maps/d/u/0/embed?mid=1Dw8VFvd8J6xxKLai-ogxSPtJ0Vw",
-    "image": "tokyo.png"
+    "image": "tokyo.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "https://www.google.com/maps/d/u/0/embed?mid=1Dw8VFvd8J6xxKLai-ogxSPtJ0Vw",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Tokyo",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Tokyo",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Tokyo",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "california-pch-usa",
     "city": "California PCH",
     "country": "USA",
-    "url": "https://www.google.com/maps/d/u/0/embed?mid=19BFYM2n-DRCk3ehLplYGFgKiZrQ",
-    "image": "pch.png"
+    "image": "pch.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "https://www.google.com/maps/d/u/0/embed?mid=19BFYM2n-DRCk3ehLplYGFgKiZrQ",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day on the California PCH",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days on the California PCH",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days on the California PCH",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "barcelona-spain",
     "city": "Barcelona",
-    "country": "Spain",
-    "url": "https://www.google.com/maps/d/u/0/embed?mid=1QIj_AJKrcJFBGi0x-Y9nyMqiVAw",
-    "image": "barcelona.png"
+    "country": "Spain",    
+    "image": "barcelona.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "https://www.google.com/maps/d/u/0/embed?mid=1QIj_AJKrcJFBGi0x-Y9nyMqiVAw",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Barcelona",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Barcelona",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Barcelona",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "london-united-kingdom",
     "city": "London",
     "country": "United Kingdom",
-    "url": "https://www.google.com/maps/d/u/0/embed?mid=1Y_-boGFQmH1aBhZI6EHxjWGcTog",
-    "image": "london.png"
+    "image": "london.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "https://www.google.com/maps/d/u/0/embed?mid=1Y_-boGFQmH1aBhZI6EHxjWGcTog",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in London",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in London",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in London",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "kyoto-japan",
     "city": "Kyoto",
     "country": "Japan",
-    "url": "https://www.google.com/maps/d/u/0/embed?mid=1F5-Q9Tz7V_bQEHCmiG5P0bGuc7s",
-    "image": "kyoto.png"
+    "image": "kyoto.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "https://www.google.com/maps/d/u/0/embed?mid=1F5-Q9Tz7V_bQEHCmiG5P0bGuc7s",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Kyoto",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Kyoto",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Kyoto",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "paris-france",
     "city": "Paris",
     "country": "France",
-    "url": "https://www.google.com/maps/d/u/0/embed?mid=1Yp4qQiJEPTMgblNykmMmJkgdn3w",
-    "image": "paris.png"
+    "image": "paris.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "https://www.google.com/maps/d/u/0/embed?mid=1Yp4qQiJEPTMgblNykmMmJkgdn3w",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Paris",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Paris",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Paris",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "hiroshima-japan",
     "city": "Hiroshima",
     "country": "Japan",
-    "url": "https://www.google.com/maps/d/u/0/embed?mid=1x9Lo7fwc-tSNBUILvI8aKGOOpLk",
-    "image": "hiroshima.png"
+    "image": "hiroshima.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "https://www.google.com/maps/d/u/0/embed?mid=1x9Lo7fwc-tSNBUILvI8aKGOOpLk",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Hiroshima",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Hiroshima",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Hiroshima",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "madrid-spain",
     "city": "Madrid",
     "country": "Spain",
-    "url": "https://www.google.com/maps/d/u/0/embed?mid=15bUjtMkN5xCag-mSyTqBhsPRa6E",
-    "image": "madrid.png"
+    "image": "madrid.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "https://www.google.com/maps/d/u/0/embed?mid=15bUjtMkN5xCag-mSyTqBhsPRa6E",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Madrid",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Madrid",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Madrid",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "copenhagen-denmark",
     "city": "Copenhagen",
     "country": "Denmark",
-    "url": "https://www.google.com/maps/d/u/0/embed?mid=1-YmOvw1XvsZqQyVQ801OOTeSjo0",
-    "image": "copenhagen.png"
+    "image": "copenhagen.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "https://www.google.com/maps/d/u/0/embed?mid=1-YmOvw1XvsZqQyVQ801OOTeSjo0",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Copenhagen",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Copenhagen",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Copenhagen",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "malaga-spain",
     "city": "Malaga",
     "country": "Spain",
-    "url": "https://www.google.com/maps/d/u/0/embed?mid=1Rya1xvaIzTUQYHnfOQI7cksUGCo",
-    "image": "malaga.png"
+    "image": "malaga.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "https://www.google.com/maps/d/u/0/embed?mid=1Rya1xvaIzTUQYHnfOQI7cksUGCo",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Malaga",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Malaga",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Malaga",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "atlanta-usa",
     "city": "Atlanta",
     "country": "USA",
-    "url": "",
-    "image": "atlanta.png"
+    "image": "atlanta.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Atlanta",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Atlanta",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Atlanta",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "austin-usa",
     "city": "Austin",
     "country": "USA",
-    "url": "",
-    "image": "austin.png"
+    "image": "austin.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Austin",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Austin",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Austin",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "chicago-usa",
     "city": "Chicago",
     "country": "USA",
-    "url": "",
-    "image": "chicago.png"
+    "image": "chicago.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Chicago",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Chicago",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Chicago",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "denver-usa",
     "city": "Denver",
     "country": "USA",
-    "url": "",
-    "image": "denver.png"
+    "image": "denver.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Denver",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Denver",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Denver",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "granada-spain",
     "city": "Granada",
     "country": "Spain",
-    "url": "",
-    "image": "granada.png"
+    "image": "granada.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Granada",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Granada",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Granada",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "los-angeles-usa",
     "city": "Los Angeles",
     "country": "USA",
-    "url": "",
-    "image": "los_angeles.png"
+    "image": "los_angeles.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Los Angeles",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Los Angeles",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Los Angeles",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "new-york-usa",
     "city": "New York",
     "country": "USA",
-    "url": "",
-    "image": "new_york.png"
+    "image": "new_york.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in New York",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in New York",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in New York",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "portland-usa",
     "city": "Portland",
     "country": "USA",
-    "url": "",
-    "image": "portland.png"
+    "image": "portland.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Portland",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Portland",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Portland",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "quito-ecuador",
     "city": "Quito",
     "country": "Ecuador",
-    "url": "",
-    "image": "quito.png"
+    "image": "quito.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Quito",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Quito",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Quito",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "rio-de-janeiro-brazil",
     "city": "Rio de Janeiro",
     "country": "Brazil",
-    "url": "",
-    "image": "rio_de_janeiro.png"
+    "image": "rio_de_janeiro.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Rio de Janeiro",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Rio de Janeiro",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Rio de Janeiro",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "san-francisco-usa",
     "city": "San Francisco",
     "country": "USA",
-    "url": "",
-    "image": "san_francisco.png"
+    "image": "san_francisco.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in San Francisco",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in San Francisco",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in San Francisco",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "seatle-usa",
     "city": "Seattle",
     "country": "USA",
-    "url": "",
-    "image": "seattle.png"
+    "image": "seattle.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Seattle",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Seattle",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Seattle",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "seville-spain",
     "city": "Seville",
     "country": "Spain",
-    "url": "",
-    "image": "seville.png"
+    "image": "seville.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Seville",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Seville",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Seville",
+        "url": "",
+        "price": 1
+      }
+    ]
   },
   {
     "id": "washington-dc-usa",
     "city": "Washington D.C.",
     "country": "USA",
-    "url": "",
-    "image": "washington_dc.png"
+    "image": "washington_dc.png",
+    "maps": [
+      {
+        "id": "general",
+        "title": "General",
+        "url": "",
+        "price": null
+      },
+      {
+        "id": "one-day",
+        "title": "1 Day in Washington D.C.",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "two-day",
+        "title": "2 Days in Washington D.C.",
+        "url": "",
+        "price": 1
+      },
+      {
+        "id": "three-day",
+        "title": "3 Days in Washington D.C.",
+        "url": "",
+        "price": 1
+      }
+    ]
   }
 ]

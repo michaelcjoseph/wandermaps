@@ -12,7 +12,7 @@ const MapItem = (props) => {
   }
 
   const getComingSoon = () => {
-    if (props.item.url.length > 0) {
+    if (props.item.maps[0].url.length > 0) {
       return "";
     } else {
       return " (Coming Soon)";

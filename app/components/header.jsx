@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
 import EmailForm from '../containers/email_form.jsx';
+const logo_text = require('../assets/images/logo-text.svg');
 
 const Header = (props) => {
   const getBackButton = () => {
     if (props.back_button) {
       return (
-        <Link to="/">
+        <Link to={props.back_route} >
           <div className="back-button position-relative">
             <i className="fa fa-arrow-left fa-2x"></i>
           </div>
@@ -17,17 +18,32 @@ const Header = (props) => {
     return null;
   };
 
-  return (
-    <header id="header" className="header-nav zindex100 position-fixed col-xs-12">
+  const getEmailFormHeader = () => {
+    return (
       <div className="center-align display-flex flex-vertically-center flex-horizontally-center flex-wrap">
         {getBackButton()}
         <div className="position-relative">
           <p className="header-text"><strong>Don't miss out! Get updates on cities!</strong></p>
         </div>
         <div className="position-relative">
-          <EmailForm />
+          <EmailForm paid={props.paid} />
         </div>
       </div>
+    )
+  }
+
+  const getStandardHeader = () => {
+    return (
+      <div className="center-align display-flex flex-vertically-center flex-horizontally-center flex-wrap">
+        {getBackButton()}
+        <img className="header-logo-text" src={logo_text} alt="Wander Maps" />
+      </div>
+    )
+  }
+
+  return (
+    <header id="header" className="header-nav zindex100 position-fixed col-xs-12">
+      {props.email_form ? getEmailFormHeader() : getStandardHeader()}
     </header>
   );
 }
