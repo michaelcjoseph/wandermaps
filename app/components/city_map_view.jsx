@@ -3,18 +3,11 @@ import Header from './header.jsx';
 
 const CityMapView = (props) => {
   const getCityMapBodyStyle = () => {
-    const header = document.getElementById('header');
+    return { height: props.window_height + 'px' };
+  };
 
-    var header_height = props.is_mobile ? 122 : 70;
-
-    if (header) {
-      header_height = header.clientHeight
-    }
-
-    return { 
-      marginTop: header_height + 'px',
-      height: props.window_height + 'px' 
-    };
+  const getCityMapBodyClasses = () => {
+    return props.is_mobile ? "padding-for-header-mobile" : "padding-for-header";
   };
 
   const getCityMapBody = () => {
@@ -49,7 +42,8 @@ const CityMapView = (props) => {
         back_button={true} 
         back_route={"/" + props.city_id} 
         paid={props.route.city_map_view.price ? true : false} />
-      <div className={"col-xs-12 position0"} style={getCityMapBodyStyle()} >
+      {console.log(props.route.city_map_view.price ? true : false)}
+      <div className={"col-xs-12 position0 " + getCityMapBodyClasses()} style={getCityMapBodyStyle()} >
         {getCityMapBody()}
       </div>
     </div>
