@@ -25,9 +25,9 @@ class EmailForm extends React.Component {
 
   postEmail(email) {
     Reqwest({
-      url: ('/api/emails/' + email),
+      url: ('/api/emails/' + email +'/' + props.paid),
       method: 'post',
-      data: { email: email },
+      data: { email: email, paid: props.paid },
       success: function() {
         console.log(email + ' added to list of subscribed emails.');
       }

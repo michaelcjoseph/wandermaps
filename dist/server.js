@@ -15,7 +15,7 @@ module.exports = {
       response.sendFile(indexPath) 
     });
 
-    app.post('/api/emails/:email', (request, response) => {
+    app.post('/api/emails/:email/:paid', (request, response) => {
       var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
@@ -24,7 +24,7 @@ module.exports = {
         }
       });
 
-      var text = 'New email added to Wander Maps: ' + request.params.email;
+      var text = 'New email added to Wander Maps: ' + request.params.email + '\n\nPaid status: ' + request.params.paid;
 
       var mailOptions = {
         from: 'michael.c.joseph.12@gmail.com', 
