@@ -41,7 +41,7 @@ const CityMap = (props) => {
   const getMapsList = () => {
     return (
       <div className="col-xs-12">
-        <Header back_button={true} back_route={"/"} />
+        <Header back_button={true} back_route={"/"} email_form={true} />
         <div className="center-align width100 padding-for-header col-xs-12">
           <h1 className="fat-font">{props.route.city_maps.city}</h1>
           <h4 className="thin-font">{props.route.city_maps.country}</h4>
