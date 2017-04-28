@@ -6,6 +6,10 @@ class EmailForm extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      email_submitted: false
+    };
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.postEmail = this.postEmail.bind(this);
   }
@@ -21,6 +25,9 @@ class EmailForm extends React.Component {
     const email = refs.email.value;
     console.log(email);
     this.postEmail(email);
+    this.setState({
+      email_submitted: true
+    });
   }
 
   postEmail(email) {
@@ -56,10 +63,18 @@ class EmailForm extends React.Component {
     );
   }
 
+  renderThankYou() {
+    return (
+      <div className="col-xs-12">
+        <p className="header-text"><strong>Thanks! We'll email you with news.</strong></p>
+      </div>
+    )
+  }
+
   render() {
     return (
       <div className="email-form col-xs-12">
-        { this.renderForm() }
+        { this.state.email_submitted ? this.renderThankYou() : this.renderForm() }
       </div>
     );
   }
