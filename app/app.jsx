@@ -4,6 +4,9 @@ import React from 'react';
 import { Router, browserHistory } from 'react-router';
 import routes from './routes.jsx';
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-98306677-1');
+
 class App extends React.Component {
   hashLinkScroll() {
     const { hash } = window.location;
@@ -21,12 +24,22 @@ class App extends React.Component {
     }
   }
 
+  logPageView() {
+    ReactGA.set({ page: window.location.pathname });
+    ReactGA.pageview(window.location.pathname);
+  }
+
+  onUpdate() {
+    this.logPageView();
+    this.hashLinkScroll();
+  }
+
   render() {
     return (
       <Router 
         history={browserHistory} 
         routes={routes} 
-        onUpdate={this.hashLinkScroll}
+        onUpdate={this.onUpdate}
       />
     );
   }
