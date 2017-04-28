@@ -8,7 +8,10 @@ import ReactGA from 'react-ga';
 ReactGA.initialize('UA-98306677-1');
 
 class App extends React.Component {
-  hashLinkScroll() {
+  onUpdate() {
+    ReactGA.set({ page: window.location.pathname });
+    ReactGA.pageview(window.location.pathname);
+
     const { hash } = window.location;
     if (hash !== '') {
       // Push onto callback queue so it runs after the DOM is updated,
@@ -22,16 +25,6 @@ class App extends React.Component {
     } else {
       (() => window.scrollTo(0, 0));
     }
-  }
-
-  logPageView() {
-    ReactGA.set({ page: window.location.pathname });
-    ReactGA.pageview(window.location.pathname);
-  }
-
-  onUpdate() {
-    this.logPageView();
-    this.hashLinkScroll();
   }
 
   render() {
