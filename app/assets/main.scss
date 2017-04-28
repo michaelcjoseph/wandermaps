@@ -333,6 +333,75 @@ a {
   padding: 0;
 }
 
+/*** City Maps ***/
+
+.city-maps-list {
+  list-style: none;
+  margin: 1em 2em;
+}
+
+.city-maps-item {
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 2px;
+  margin-bottom: 1.5em;
+}
+
+.city-maps-item-general {
+  background-color: #F5F5F5;
+  border-color: #2f2f2f;
+  color: rgb(47, 47, 47);
+}
+
+.city-maps-item-general:hover {
+  border-color: #337ab7;
+  color: #337ab7;
+
+  .city-maps-item-inner-general {
+    border-color: #337ab7;
+  }
+}
+
+.city-maps-item-premium {
+  background-color: #449d44;
+  border-color: #398439;
+  color: rgb(255, 255, 255);
+}
+
+.city-maps-item-premium:hover {
+  background-color: #277927;
+  border-color: #145f14;
+
+  .city-maps-item-inner-premium {
+    border-color: #145f14;
+  }
+}
+
+.city-maps-item-inner {
+  border-style: solid;
+  border-width: 0px 1px 0px 0px;
+
+  h3 {
+    margin-top: 0px;
+  }
+
+  p {
+    margin-bottom: 5px;
+  }
+}
+
+.city-maps-item-inner-general {
+  border-color: rgb(47, 47, 47);
+}
+
+.city-maps-item-inner-premium {
+  border-color: #277927;
+}
+
+.city-maps-item-padding {
+  padding: 1em;
+}
+
 /*** City Map View ***/
 
 .no-city-map-logo {

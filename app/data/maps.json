@@ -7,7 +7,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Tokyo Guide",
         "url": "https://www.google.com/maps/d/u/0/embed?mid=1Dw8VFvd8J6xxKLai-ogxSPtJ0Vw",
         "price": null
       },
@@ -15,19 +15,19 @@
         "id": "one-day",
         "title": "1 Day in Tokyo",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Tokyo",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Tokyo",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -39,7 +39,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "California PCH Guide",
         "url": "https://www.google.com/maps/d/u/0/embed?mid=19BFYM2n-DRCk3ehLplYGFgKiZrQ",
         "price": null
       },
@@ -47,19 +47,19 @@
         "id": "one-day",
         "title": "1 Day on the California PCH",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days on the California PCH",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days on the California PCH",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -71,7 +71,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Barcelona Guide",
         "url": "https://www.google.com/maps/d/u/0/embed?mid=1QIj_AJKrcJFBGi0x-Y9nyMqiVAw",
         "price": null
       },
@@ -79,19 +79,19 @@
         "id": "one-day",
         "title": "1 Day in Barcelona",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Barcelona",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Barcelona",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -103,7 +103,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "London Guide",
         "url": "https://www.google.com/maps/d/u/0/embed?mid=1Y_-boGFQmH1aBhZI6EHxjWGcTog",
         "price": null
       },
@@ -111,19 +111,19 @@
         "id": "one-day",
         "title": "1 Day in London",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in London",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in London",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -135,7 +135,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Kyoto Guide",
         "url": "https://www.google.com/maps/d/u/0/embed?mid=1F5-Q9Tz7V_bQEHCmiG5P0bGuc7s",
         "price": null
       },
@@ -143,19 +143,19 @@
         "id": "one-day",
         "title": "1 Day in Kyoto",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Kyoto",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Kyoto",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -167,7 +167,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Paris Guide",
         "url": "https://www.google.com/maps/d/u/0/embed?mid=1Yp4qQiJEPTMgblNykmMmJkgdn3w",
         "price": null
       },
@@ -175,19 +175,19 @@
         "id": "one-day",
         "title": "1 Day in Paris",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Paris",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Paris",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -199,7 +199,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Hiroshima Guide",
         "url": "https://www.google.com/maps/d/u/0/embed?mid=1x9Lo7fwc-tSNBUILvI8aKGOOpLk",
         "price": null
       },
@@ -207,19 +207,19 @@
         "id": "one-day",
         "title": "1 Day in Hiroshima",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Hiroshima",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Hiroshima",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -231,7 +231,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Madrid Guide",
         "url": "https://www.google.com/maps/d/u/0/embed?mid=15bUjtMkN5xCag-mSyTqBhsPRa6E",
         "price": null
       },
@@ -239,19 +239,19 @@
         "id": "one-day",
         "title": "1 Day in Madrid",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Madrid",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Madrid",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -263,7 +263,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Copenhagen Guide",
         "url": "https://www.google.com/maps/d/u/0/embed?mid=1-YmOvw1XvsZqQyVQ801OOTeSjo0",
         "price": null
       },
@@ -271,19 +271,19 @@
         "id": "one-day",
         "title": "1 Day in Copenhagen",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Copenhagen",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Copenhagen",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -295,7 +295,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Malaga Guide",
         "url": "https://www.google.com/maps/d/u/0/embed?mid=1Rya1xvaIzTUQYHnfOQI7cksUGCo",
         "price": null
       },
@@ -303,19 +303,19 @@
         "id": "one-day",
         "title": "1 Day in Malaga",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Malaga",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Malaga",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -327,7 +327,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Atlanta Guide",
         "url": "",
         "price": null
       },
@@ -335,19 +335,19 @@
         "id": "one-day",
         "title": "1 Day in Atlanta",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Atlanta",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Atlanta",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -359,7 +359,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Austin Guide",
         "url": "",
         "price": null
       },
@@ -367,19 +367,19 @@
         "id": "one-day",
         "title": "1 Day in Austin",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Austin",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Austin",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -391,7 +391,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Chicago Guide",
         "url": "",
         "price": null
       },
@@ -399,19 +399,19 @@
         "id": "one-day",
         "title": "1 Day in Chicago",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Chicago",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Chicago",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -423,7 +423,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Denver Guide",
         "url": "",
         "price": null
       },
@@ -431,19 +431,19 @@
         "id": "one-day",
         "title": "1 Day in Denver",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Denver",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Denver",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -455,7 +455,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Granada Guide",
         "url": "",
         "price": null
       },
@@ -463,19 +463,19 @@
         "id": "one-day",
         "title": "1 Day in Granada",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Granada",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Granada",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -487,7 +487,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Los Angeles Guide",
         "url": "",
         "price": null
       },
@@ -495,19 +495,19 @@
         "id": "one-day",
         "title": "1 Day in Los Angeles",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Los Angeles",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Los Angeles",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -519,7 +519,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "New York Guide",
         "url": "",
         "price": null
       },
@@ -527,19 +527,19 @@
         "id": "one-day",
         "title": "1 Day in New York",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in New York",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in New York",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -551,7 +551,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Portland Guide",
         "url": "",
         "price": null
       },
@@ -559,19 +559,19 @@
         "id": "one-day",
         "title": "1 Day in Portland",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Portland",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Portland",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -583,7 +583,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Quito Guide",
         "url": "",
         "price": null
       },
@@ -591,19 +591,19 @@
         "id": "one-day",
         "title": "1 Day in Quito",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Quito",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Quito",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -615,7 +615,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Rio de Janeiro Guide",
         "url": "",
         "price": null
       },
@@ -623,19 +623,19 @@
         "id": "one-day",
         "title": "1 Day in Rio de Janeiro",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Rio de Janeiro",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Rio de Janeiro",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -647,7 +647,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "San Francisco Guide",
         "url": "",
         "price": null
       },
@@ -655,19 +655,19 @@
         "id": "one-day",
         "title": "1 Day in San Francisco",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in San Francisco",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in San Francisco",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -679,7 +679,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Seattle Guide",
         "url": "",
         "price": null
       },
@@ -687,19 +687,19 @@
         "id": "one-day",
         "title": "1 Day in Seattle",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Seattle",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Seattle",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -711,7 +711,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Seville Guide",
         "url": "",
         "price": null
       },
@@ -719,19 +719,19 @@
         "id": "one-day",
         "title": "1 Day in Seville",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Seville",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Seville",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   },
@@ -743,7 +743,7 @@
     "maps": [
       {
         "id": "general",
-        "title": "General",
+        "title": "Washington D.C. Guide",
         "url": "",
         "price": null
       },
@@ -751,19 +751,19 @@
         "id": "one-day",
         "title": "1 Day in Washington D.C.",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "two-day",
         "title": "2 Days in Washington D.C.",
         "url": "",
-        "price": 1
+        "price": 2
       },
       {
         "id": "three-day",
         "title": "3 Days in Washington D.C.",
         "url": "",
-        "price": 1
+        "price": 2
       }
     ]
   }
