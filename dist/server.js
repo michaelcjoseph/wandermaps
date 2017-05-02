@@ -1,6 +1,6 @@
-import path from 'path';
-import express from 'express';
-import nodemailer from 'nodemailer';
+const path = require('path');
+const express = require('express');
+const nodemailer = require('nodemailer');
 
 module.exports = {
   app: function () {
