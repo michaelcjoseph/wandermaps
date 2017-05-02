@@ -6,8 +6,8 @@
   "scripts": {
     "devserve": "webpack-dev-server --progress --colors",
     "build": "NODE_ENV=production webpack -p --config ./webpack.config.js --progress --colors",
-    "postinstall": "npm run build",
-    "start": "node dist/app.js"
+    "postinstall": "./node_modules/.bin/babel dist -d lib && npm run build",
+    "start": "node lib/app.js"
   },
   "repository": {
     "type": "git",
