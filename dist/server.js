@@ -1,12 +1,12 @@
-import path from 'path';
-import express from 'express';
-import nodemailer from 'nodemailer';
+const path = require('path');
+const express = require('express');
+const nodemailer = require('nodemailer');
 
 module.exports = {
   app: function () {
     const app = express();
-    const indexPath = path.join(__dirname, '../dist', 'index.html');
-    const publicPath = express.static(path.join(__dirname, '../lib'));
+    const indexPath = path.join(__dirname, 'index.html');
+    const publicPath = express.static(path.join(__dirname, '../dist'));
     const emailsJsonPath = path.join(__dirname, 'emails.json');
 
     app.use(publicPath);
