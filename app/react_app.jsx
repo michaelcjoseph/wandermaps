@@ -7,7 +7,7 @@ import routes from './routes.jsx';
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-98306677-1');
 
-class App extends React.Component {
+class ReactApp extends React.Component {
   onUpdate() {
     ReactGA.set({ page: window.location.pathname });
     ReactGA.pageview(window.location.pathname);
@@ -38,4 +38,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default ReactApp;

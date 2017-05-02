@@ -1,11 +1,11 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 
-import App from './app.jsx';
+import ReactApp from './react_app.jsx';
 
 const renderApp = () => {
   ReactDOM.render(
-    <App />, 
+    <ReactApp />, 
     document.getElementById('main')
   );
 };
