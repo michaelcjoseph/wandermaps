@@ -1,4 +1,4 @@
-export default ({ body, title }) => {
+export default ({ body }) => {
   return `
     <!DOCTYPE html>
     <html>
