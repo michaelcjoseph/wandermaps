@@ -2,12 +2,12 @@
   "name": "wandermaps",
   "version": "1.0.0",
   "description": "Google Maps for different cities with things to do/see/eat",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "devserve": "webpack-dev-server --progress --colors",
     "build": "NODE_ENV=production webpack -p --config ./webpack.config.js --progress --colors",
     "postinstall": "npm run build",
-    "start": "babel-node -- src/server.js"
+    "start": "NODE_ENV=production babel-node -- src/server.js"
   },
   "repository": {
     "type": "git",
