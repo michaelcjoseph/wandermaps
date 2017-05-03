@@ -5,7 +5,7 @@ import Home from './components/home.jsx';
 import CityMaps from './components/city_maps.jsx';
 import CityMapView from './components/city_map_view.jsx';
 import NotFoundPage from './components/not_found_page.jsx';
-import maps_data from './data/maps.json';
+import maps_data from './data/maps.js';
 
 const renderCityMapViewRoute = (city_map_view, i) => {
   return (

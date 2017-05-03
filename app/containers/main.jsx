@@ -1,5 +1,5 @@
 import React from 'react';
-import maps_data from '../data/maps.json';
+import maps_data from '../data/maps.js';
 
 class Main extends React.Component {
   constructor(props) {

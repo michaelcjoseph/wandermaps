@@ -1,4 +1,4 @@
-[
+const maps = [
   {
     "id": "barcelona-spain",
     "city": "Barcelona",
@@ -767,4 +767,6 @@
       }
     ]
   }
-]
+];
+
+export default maps;
