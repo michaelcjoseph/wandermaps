@@ -6,17 +6,17 @@ const debug = process.env.NODE_ENV !== "production";
 
 module.exports = {
   devtool: debug ? "eval" : "",
-  entry: path.join(__dirname, "app", "client.jsx"),
+  entry: path.join(__dirname, "src", "client.jsx"),
   devServer: {
     inline: true,
     port: 8080,
-    contentBase: "app/static/",
+    contentBase: "src/static/",
     historyApiFallback: {
       index: '/index.html'
     }
   },
   output: {
-    path: path.join(__dirname, "app", "static", "js"),
+    path: path.join(__dirname, "src", "static", "js"),
     publicPath: "/js/",
     filename: "bundle.js"
   },
