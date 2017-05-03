@@ -6,7 +6,7 @@ const debug = process.env.NODE_ENV !== "production";
 
 module.exports = {
   devtool: debug ? "eval" : "",
-  entry: path.join(__dirname, "app", "index.jsx"),
+  entry: path.join(__dirname, "app", "client.jsx"),
   devServer: {
     inline: true,
     port: 8080,
