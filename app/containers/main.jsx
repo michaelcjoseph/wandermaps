@@ -58,18 +58,26 @@ class Main extends React.Component {
     return filtered_maps;
   }
 
+  renderChildrenWithProps() {
+    const childrenWithProps = React.Children.map(this.props.children,
+      (child) => React.cloneElement(child, {
+        window_height: this.state.window_height,
+        is_mobile: (this.state.window_width <= 991),
+        maps_data: this.state.filtered_maps_data,
+        search_value: this.state.search_value,
+        handleSearch: this.handleSearch
+      })
+    );
+
+    return childrenWithProps;
+  }
+
   render() {
     return ( 
-      <div>
-        {React.cloneElement(
-          this.props.children, {
-            window_height: this.state.window_height,
-            is_mobile: (this.state.window_width <= 991),
-            maps_data: this.state.filtered_maps_data,
-            search_value: this.state.search_value,
-            handleSearch: this.handleSearch
-          }
-        )}
+      <div className="col-xs-12">
+        <div className="main-content col-xs-12">
+          {this.renderChildrenWithProps()}
+        </div>
       </div>
     )
   }
