@@ -5,7 +5,7 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import nodemailer from 'nodemailer';
-import routes from './routes.jsx';
+import routes from './routes';
 import NotFoundPage from './components/not_found_page.jsx';
 
 // initialize the server and configure support for ejs templates
@@ -95,7 +95,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // start the server
-const port = (process.env.PORT || 8080);
+const port = process.env.PORT || 8080;
 const env = process.env.NODE_ENV || 'production';
 
 server.listen(port, err => {
