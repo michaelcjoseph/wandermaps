@@ -36,13 +36,13 @@ module.exports = {
           if (renderProps) {
             // if the current route matched we have renderProps
             markup = renderToString(<RouterContext {...renderProps}/>);
+            res.status(200);
           } else {
             // otherwise we can render a 404 page
             markup = renderToString(<NotFoundPage/>);
             res.status(404);
           }
 
-          console.log(markup);
           // render the index template with the embedded React markup
           return res.render('index', { markup });
         }
