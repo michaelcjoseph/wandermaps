@@ -3,7 +3,7 @@ import './static/css/main.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, browserHistory } from 'react-router';
-import routes from './routes.jsx';
+import routes from './routes.js';
 
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-98306677-1');
