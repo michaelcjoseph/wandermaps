@@ -1,11 +1,10 @@
 import React from 'react';
-const logo = require('../static/img/logo.svg');
 
 const Title = (props) => {
   return (
     <div className="width100">
       <div className="title position-absolute center-align col-xs-12">
-        <img className="title-logo" src={logo} alt="Wander Maps" />
+        <img className="title-logo" src={"/img/logo.svg"} alt="Wander Maps" />
         <h4 className="title-subtext thin-font">
           City guides crowdsourced from locals, travelers, blogs, and You*
         </h4>

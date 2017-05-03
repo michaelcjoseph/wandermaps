@@ -1,7 +1,5 @@
 import React from 'react';
 import Header from './header.jsx';
-const logo = require('../static/img/logo.svg');
-const map_background = require('../static/img/world_map.svg');
 
 const CityMapView = (props) => {
   const getCityMapBodyStyle = () => {
@@ -30,9 +28,9 @@ const CityMapView = (props) => {
     return (
       <div className="col-xs-12 center-align padding-for-header">
         <div className="top0 width100 height100 col-xs-12">
-          <img className="no-city-map-logo" src={"/" + logo} alt="Wander Maps" />
+          <img className="no-city-map-logo" src={"/img/logo.svg"} alt="Wander Maps" />
           <div className="map-background no-city-map-background width100 position-absolute center-align">
-            <img className="background-svg width100 position-relative bottom0 left0" src={"/" + map_background} alt="World Map"/>
+            <img className="background-svg width100 position-relative bottom0 left0" src={"/img/world_map.svg"} alt="World Map"/>
           </div>
         </div>
         <h3 className="padding-for-header col-xs-12">

@@ -4,7 +4,6 @@ import Header from './header.jsx';
 import Title from './title.jsx';
 import SearchBar from './search_bar.jsx';
 import MapsList from './maps_list.jsx';
-var map_background = require('../static/img/world_map.svg');
 
 const Home = (props) => {
   const getSectionGridClasses = () => {
@@ -33,7 +32,7 @@ const Home = (props) => {
           <Title />
           {props.is_mobile ? getDownArrow() : null}
           <div className="map-background width100 position-absolute center-align">
-            <img className="background-svg width100 position-relative bottom0 left0" src={map_background} alt="World Map"/>
+            <img className="background-svg width100 position-relative bottom0 left0" src={"/img/world_map.svg"} alt="World Map"/>
           </div>
         </div>
       </div>

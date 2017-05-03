@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 import EmailForm from '../containers/email_form.jsx';
-const logo_text = require('../static/img/logo-text.svg');
 
 const Header = (props) => {
   const getBackButton = () => {
@@ -36,7 +35,7 @@ const Header = (props) => {
     return (
       <div className="center-align display-flex flex-vertically-center flex-horizontally-center flex-wrap">
         {getBackButton()}
-        <img className="header-logo-text" src={logo_text} alt="Wander Maps" />
+        <img className="header-logo-text" src={"/img/logo-text.svg"} alt="Wander Maps" />
       </div>
     )
   }
