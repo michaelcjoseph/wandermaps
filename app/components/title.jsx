@@ -1,5 +1,5 @@
 import React from 'react';
-const logo = require('../assets/images/logo.svg');
+const logo = require('../static/img/logo.svg');
 
 const Title = (props) => {
   return (

@@ -10,10 +10,13 @@ module.exports = {
   devServer: {
     inline: true,
     port: 8080,
-    contentBase: "dist/"
+    contentBase: "app/static/",
+    historyApiFallback: {
+      index: '/index.html'
+    }
   },
   output: {
-    path: path.join(__dirname, "dist"),
+    path: path.join(__dirname, "app", "static"),
     filename: "bundle.js"
   },
   module: {

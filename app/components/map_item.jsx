@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const MapItem = (props) => {
   const getImageUrl = () => {
-    var image = require('../assets/images/' + props.item.image);
+    var image = require('../static/img/' + props.item.image);
     return image;
   }
 

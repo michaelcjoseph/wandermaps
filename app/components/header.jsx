@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import EmailForm from '../containers/email_form.jsx';
-const logo_text = require('../assets/images/logo-text.svg');
+const logo_text = require('../static/img/logo-text.svg');
 
 const Header = (props) => {
   const getBackButton = () => {

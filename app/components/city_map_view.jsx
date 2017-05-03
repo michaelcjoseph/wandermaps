@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './header.jsx';
-const logo = require('../assets/images/logo.svg');
-const map_background = require('../assets/images/world_map.svg');
+const logo = require('../static/img/logo.svg');
+const map_background = require('../static/img/world_map.svg');
 
 const CityMapView = (props) => {
   const getCityMapBodyStyle = () => {

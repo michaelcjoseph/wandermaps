@@ -4,7 +4,7 @@ import Header from './header.jsx';
 import Title from './title.jsx';
 import SearchBar from './search_bar.jsx';
 import MapsList from './maps_list.jsx';
-var map_background = require('../assets/images/world_map.svg');
+var map_background = require('../static/img/world_map.svg');
 
 const Home = (props) => {
   const getSectionGridClasses = () => {
