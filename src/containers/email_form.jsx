@@ -29,7 +29,7 @@ class EmailForm extends React.Component {
       email_submitted: true
     });
   }
-
+  
   postEmail(email) {
     Reqwest({
       url: ('/api/emails/' + email +'/' + this.props.paid),
@@ -40,7 +40,7 @@ class EmailForm extends React.Component {
       }
     });
   }
-
+  
   renderForm() {
     return (
       <form className="col-xs-12" onSubmit={ this.handleSubmit }>
