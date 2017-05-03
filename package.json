@@ -5,8 +5,9 @@
   "main": "src/server.js",
   "scripts": {
     "devserve": "webpack-dev-server --progress --colors",
-    "build": "NODE_ENV=production webpack -p --config ./webpack.config.js --progress --colors",
-    "postinstall": "npm run build",
+    "buildjs": "NODE_ENV=production webpack -p --config ./webpack.config.js --progress --colors",
+    "buildcss": "sass ./src/static/css/main.scss ./src/static/css/main.css",
+    "postinstall": "npm run buildcss && npm run buildjs",
     "start": "NODE_ENV=production babel-node -- src/server.js"
   },
   "repository": {
