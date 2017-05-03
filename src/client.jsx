@@ -39,11 +39,9 @@ class ReactApp extends React.Component {
   }
 }
 
-const renderApp = () => {
+window.onload = () => {
   ReactDOM.render(
     <ReactApp />, 
     document.getElementById('main')
   );
 };
-
-renderApp();
