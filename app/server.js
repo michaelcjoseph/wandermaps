@@ -12,7 +12,6 @@ module.exports = {
     const app = express();
     app.set('view engine', 'ejs');
     app.set('views', path.join(__dirname, 'views'));
-    const indexPath = path.join(__dirname, 'static', 'index.html');
     const publicPath = express.static(path.join(__dirname, 'static'));
 
     app.use(publicPath);
@@ -43,6 +42,7 @@ module.exports = {
             res.status(404);
           }
 
+          console.log(markup);
           // render the index template with the embedded React markup
           return res.render('index', { markup });
         }
