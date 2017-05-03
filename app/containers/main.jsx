@@ -6,8 +6,6 @@ class Main extends React.Component {
     super(props);
 
     this.state = {
-      window_width: window.innerWidth,
-      window_height: window.innerHeight,
       all_maps_data: maps_data,
       filtered_maps_data: maps_data,
       search_value: ''
@@ -20,7 +18,10 @@ class Main extends React.Component {
 
   // Once component is loaded, set up actions for resize and scroll
   componentDidMount() {
-    window.addEventListener('resize', this.handleWindowResize);
+    if (typeof(window) !== 'undefined') {
+      window.addEventListener('resize', this.handleWindowResize);
+      this.handleWindowResize();
+    } 
   }
 
   // Remove event listeners initialized
