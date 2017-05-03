@@ -12,7 +12,7 @@ module.exports = {
     port: 8080,
     contentBase: "src/static/",
     historyApiFallback: {
-      index: '/index.html'
+      index: '/index-static.html'
     }
   },
   output: {
