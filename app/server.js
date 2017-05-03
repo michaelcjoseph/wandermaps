@@ -1,18 +1,52 @@
 import path from 'path';
 import express from 'express';
 import nodemailer from 'nodemailer';
+import React from 'react';
+import { renderToString } from 'react-dom/server';
+import { match, RouterContext } from 'react-router';
+import routes from './routes.jsx';
+import NotFoundPage from './components/not_found_page.jsx';
 
 module.exports = {
   app: function () {
     const app = express();
+    app.set('view engine', 'ejs');
+    app.set('views', path.join(__dirname, 'views'));
     const indexPath = path.join(__dirname, 'static', 'index.html');
     const publicPath = express.static(path.join(__dirname, 'static'));
-    const emailsJsonPath = path.join(__dirname, 'emails.json');
 
     app.use(publicPath);
 
-    app.get('*', (request, response) => { 
-      response.sendFile(indexPath) 
+    app.get('*', (req, res) => {
+      match(
+        { routes, location: req.url },
+        (err, redirectLocation, renderProps) => {
+
+          // in case of error display the error message
+          if (err) {
+            return res.status(500).send(err.message);
+          }
+
+          // in case of redirect propagate the redirect to the browser
+          if (redirectLocation) {
+            return res.redirect(302, redirectLocation.pathname + redirectLocation.search);
+          }
+
+          // generate the React markup for the current route
+          let markup;
+          if (renderProps) {
+            // if the current route matched we have renderProps
+            markup = renderToString(<RouterContext {...renderProps}/>);
+          } else {
+            // otherwise we can render a 404 page
+            markup = renderToString(<NotFoundPage/>);
+            res.status(404);
+          }
+
+          // render the index template with the embedded React markup
+          return res.render('index', { markup });
+        }
+      );
     });
 
     app.post('/api/emails/:email/:paid', (request, response) => {
