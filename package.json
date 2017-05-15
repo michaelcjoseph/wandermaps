@@ -9,6 +9,10 @@
     "postinstall": "npm run build",
     "start": "NODE_ENV=production babel-node -- src/server.js"
   },
+  "engines": {
+    "node": "^6.10.2",
+    "npm": "^3.10.10"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/michaelcjoseph/wandermaps.git"
