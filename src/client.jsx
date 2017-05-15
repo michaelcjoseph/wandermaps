@@ -6,7 +6,7 @@ import { Router, browserHistory } from 'react-router';
 import routes from './routes.jsx';
 
 import ReactGA from 'react-ga';
-ReactGA.initialize('UA-98306677-1');
+ReactGA.initialize('UA-99178310-1');
 
 class ReactApp extends React.Component {
   onUpdate() {
