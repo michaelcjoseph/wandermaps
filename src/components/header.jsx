@@ -25,7 +25,7 @@ const Header = (props) => {
           <p className="header-text"><strong>Don't miss out! Get updates on cities!</strong></p>
         </div>
         <div className="position-relative">
-          <EmailForm paid={props.paid} />
+          <EmailForm />
         </div>
       </div>
     )

@@ -46,8 +46,7 @@ const CityMapView = (props) => {
       <Header 
         email_form={true}
         back_button={true} 
-        back_route={"/" + props.city_id} 
-        paid={props.route.city_map_view.price ? true : false} />
+        back_route={"/" + props.city_id} />
       <div className={"col-xs-12 position0 " + getCityMapBodyClasses()} style={getCityMapBodyStyle()} >
         {getCityMapBody()}
       </div>
