@@ -1,9 +1,9 @@
-import './static/css/main.scss';
+import './client/static/css/main.scss';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, browserHistory } from 'react-router';
-import routes from './routes.jsx';
+import routes from './client/routes.jsx';
 
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-99178310-1');
