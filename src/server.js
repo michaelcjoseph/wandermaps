@@ -23,6 +23,28 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+if (process.env.NODE_ENV == 'production') {
+  app.use((req, res, next) => {
+    if (!req.secure && req.get('x-forwarded-proto') != 'https') {
+      res.redirect(301, `https://${req.get("host")}${req.url}`);
+    } else {
+      next();
+    }
+  });
+} else {
+  const webpack = require('webpack');
+  const webpackDevMiddleware = require('webpack-dev-middleware');
+  const webpackHotMiddleware = require('webpack-hot-middleware');
+  const config = require('../webpack.config.js');
+  const compiler = webpack(config);
+
+  app.use(webpackHotMiddleware(compiler));
+  app.use(webpackDevMiddleware(compiler, {
+    noInfo: true,
+    publicPath: config.output.publicPathdist
+  }));
+}
+
 // Require api routes for application
 require('./server/routes')(app);
 
@@ -59,20 +81,6 @@ app.get('*', (req, res) => {
     }
   );
 });
-
-if (process.env.NODE_ENV !== 'production') {
-  const webpack = require('webpack')
-  const webpackDevMiddleware = require('webpack-dev-middleware')
-  const webpackHotMiddleware = require('webpack-hot-middleware')
-  const config = require('../webpack.config.js')
-  const compiler = webpack(config)
-
-  app.use(webpackHotMiddleware(compiler))
-  app.use(webpackDevMiddleware(compiler, {
-    noInfo: true,
-    publicPath: config.output.publicPathdist
-  }))
-}
 
 // start the server
 const port = process.env.PORT || 8080;
