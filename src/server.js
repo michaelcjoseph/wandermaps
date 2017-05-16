@@ -1,10 +1,11 @@
 import path from 'path';
 import { Server } from 'http';
 import Express from 'express';
+import logger from 'morgan';
+import bodyParser from 'body-parser';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
-import nodemailer from 'nodemailer';
 import routes from './routes.jsx';
 import NotFoundPage from './components/not_found_page.jsx';
 
@@ -16,6 +17,14 @@ app.set('views', path.join(__dirname, 'views'));
 
 // define the folder that will be used for static assets
 app.use(Express.static(path.join(__dirname, 'static')));
+
+// Set up morgan and body-parser
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// Require api routes for application
+require('./server/routes')(app);
 
 // universal routing and rendering
 app.get('*', (req, res) => {
@@ -49,35 +58,6 @@ app.get('*', (req, res) => {
       return res.render('index', { markup });
     }
   );
-});
-
-app.post('/api/emails/:email/:paid', (request, response) => {
-  var transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    auth: {
-      user: 'michael.c.joseph.12@gmail.com', // Your email id
-      pass: 'YoFool*90' // Your password
-    }
-  });
-
-  var text = 'New email added to Wander Maps: ' + request.params.email + '\n\nPaid status: ' + request.params.paid;
-
-  var mailOptions = {
-    from: 'michael.c.joseph.12@gmail.com', 
-    to: 'mjoseph.cm@gmail.com', 
-    subject: 'New Wander Maps Subscriber!', 
-    text: text 
-  };
-
-  transporter.sendMail(mailOptions, function(error, info){
-    if (error) {
-      console.log(error);
-    } else {
-      console.log('Message sent: ' + info.response);
-    };
-  });
-
-  response.send(request.params);
 });
 
 if (process.env.NODE_ENV !== 'production') {

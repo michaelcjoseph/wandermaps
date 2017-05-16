@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = (sequelize, DataTypes) => {
-  var User = sequelize.define('User', {
+  var user = sequelize.define('user', {
     email: DataTypes.STRING,
     allowNull: false,
   }, {
@@ -11,5 +11,5 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
   });
-  return User;
+  return user;
 };
