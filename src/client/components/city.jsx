@@ -20,17 +20,17 @@ const City = (props) => {
     return price ? "city-maps-item-inner-premium" : "city-maps-item-inner-general";
   };
 
-  const getMapsListItem = (city_map_view, i) => {
+  const getMapsListItem = (city_map, i) => {
     return (
       <li key={i} className="col-xs-12 col-sm-6">
-        <Link to={"/" + props.route.city.id + "/" + city_map_view.id}>
-          <div className={getMapItemOuterClass(city_map_view.price) + " city-maps-item col-xs-10 col-md-8 col-lg-6"}>
-            <div className={getMapItemInnerClass(city_map_view.price) + " city-maps-item-inner city-maps-item-padding col-xs-8"}>
-              <p className="thin-font">{getMapType(city_map_view.price)}</p>
-              <h3 className="">{city_map_view.title}</h3>
+        <Link to={"/" + props.route.city.id + "/" + city_map.id}>
+          <div className={getMapItemOuterClass(city_map.price) + " city-maps-item col-xs-10 col-md-8 col-lg-6"}>
+            <div className={getMapItemInnerClass(city_map.price) + " city-maps-item-inner city-maps-item-padding col-xs-8"}>
+              <p className="thin-font">{getMapType(city_map.price)}</p>
+              <h3 className="">{city_map.title}</h3>
             </div>
             <div className="city-maps-item-padding center-align col-xs-4">
-              <h3 className="thin-font">{getMapPrice(city_map_view.price)}</h3>
+              <h3 className="thin-font">{getMapPrice(city_map.price)}</h3>
             </div>
           </div>
         </Link>
@@ -67,7 +67,7 @@ const City = (props) => {
     )
   }
 
-  const getMapViewOptions = () => {
+  const getCityView = () => {
     if (props.children) {
       return getMapView();
     } else {
@@ -77,7 +77,7 @@ const City = (props) => {
 
   return (
     <div className="col-xs-12">
-      {getMapViewOptions()}
+      {getCityView()}
     </div>
   );
 }
