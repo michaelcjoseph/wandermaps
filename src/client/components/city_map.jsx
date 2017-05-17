@@ -1,23 +1,8 @@
 import React from 'react';
 import Header from './header.jsx';
+import FixedSectionPanel from './fixed_section_panel.jsx';
 
 const CityMap = (props) => {
-  const getCityMapBodyStyle = () => {
-    return { height: props.window_height + 'px' };
-  };
-
-  const getCityMapBodyClasses = () => {
-    return props.is_mobile ? "padding-for-header-mobile" : "padding-for-header";
-  };
-
-  const getCityMapBody = () => {
-    if (props.route.city_map.url.length > 0) {
-      return getCityMapFrame();
-    } else {
-      return getCityMapUnavailable();
-    };
-  };
-
   const getCityMapFrame = () => {
     return (
       <iframe src={props.route.city_map.url} width="100%" height="100%"></iframe>
@@ -41,13 +26,34 @@ const CityMap = (props) => {
     )
   };
 
+  const getCityMapBody = () => {
+    if (props.route.city_map.url.length > 0) {
+      return getCityMapFrame();
+    } else {
+      return getCityMapUnavailable();
+    };
+  };
+
   return (
     <div className="col-xs-12">
       <Header 
-        email_form={true}
+        email_form={true} 
         back_button={true} 
-        back_route={"/" + props.city_id} />
-      <div className={"col-xs-12 position0 " + getCityMapBodyClasses()} style={getCityMapBodyStyle()} >
+        back_route={"/" + props.city.id} />
+      <FixedSectionPanel 
+        classes={props.getSectionGridClasses()}
+        styles={props.getSectionHeight()}
+        is_mobile={props.is_mobile}
+        id_link={"/" + props.city.id + "/" + props.route.city_map.id + "/#" + props.city.city}
+        parent="city"
+        title={props.city.city}
+        subtitle={props.city.country}
+        description={""}
+        background_image={"/img/" + props.city.image} />
+      <div 
+        id={props.city.city}
+        className={props.getSecondSectionClasses() + props.getSectionGridClasses()}
+        style={props.getSectionHeight()}>
         {getCityMapBody()}
       </div>
     </div>

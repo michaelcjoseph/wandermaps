@@ -11,7 +11,7 @@ const City = (props) => {
     } else {
       return "padding-for-header overflow-scroll second-section-border"
     }
-  }
+  };
 
   const getMapsList = () => {
     return (
@@ -41,9 +41,11 @@ const City = (props) => {
     return ( 
       React.cloneElement(
         props.children, {
-          city_id: props.route.city.id,
-          window_height: props.window_height,
+          city: props.route.city,
           is_mobile: props.is_mobile,
+          getSectionHeight: props.getSectionHeight,
+          getSectionGridClasses: props.getSectionGridClasses,
+          getSecondSectionClasses: getSecondSectionClasses,
         }
       )
     )

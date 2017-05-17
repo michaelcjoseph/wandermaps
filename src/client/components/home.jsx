@@ -12,7 +12,7 @@ const Home = (props) => {
     } else {
       return "padding-for-header overflow-scroll second-section-border"
     }
-  }
+  };
 
   return (
     <div className="col-xs-12">
