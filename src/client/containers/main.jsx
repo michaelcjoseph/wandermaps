@@ -14,6 +14,8 @@ class Main extends React.Component {
     this.handleSearch = this.handleSearch.bind(this);
     this.handleSearchFilter = this.handleSearchFilter.bind(this);
     this.handleWindowResize = this.handleWindowResize.bind(this);
+    this.getSectionGridClasses = this.getSectionGridClasses.bind(this);
+    this.getSectionHeight = this.getSectionHeight.bind(this);
   }
 
   // Once component is loaded, set up actions for resize and scroll
@@ -58,6 +60,14 @@ class Main extends React.Component {
     return filtered_maps;
   }
 
+  getSectionGridClasses() {
+    return " col-xs-12 col-sm-12 col-md-6 col-lg-6 ";
+  }
+
+  getSectionHeight() {
+    return { height: this.state.window_height + 'px' };
+  }
+
   renderChildrenWithProps() {
     const childrenWithProps = React.Children.map(this.props.children,
       (child) => React.cloneElement(child, {
@@ -65,7 +75,9 @@ class Main extends React.Component {
         is_mobile: (this.state.window_width <= 991),
         maps_data: this.state.filtered_maps_data,
         search_value: this.state.search_value,
-        handleSearch: this.handleSearch
+        handleSearch: this.handleSearch,
+        getSectionGridClasses: this.getSectionGridClasses,
+        getSectionHeight: this.getSectionHeight
       })
     );
 
