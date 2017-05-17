@@ -7,10 +7,24 @@ import CitiesList from './cities_list.jsx';
 import DownArrow from './down_arrow.jsx';
 
 const Home = (props) => {
+  const getFirstSectionClasses = () => {
+    return "center-align position0 overflow-hidden";
+  }
+
+  const getSecondSectionClasses = () => {
+    if (props.is_mobile) {
+      return "padding-for-header-mobile"
+    } else {
+      return "padding-for-header overflow-scroll second-section-border"
+    }
+  }
+
   return (
     <div className="col-xs-12">
       <Header back_button={false} email_form={true} />
-      <div className={"center-align position0 overflow-hidden" + props.getSectionGridClasses()} style={props.getSectionHeight()}>
+      <div 
+        className={getFirstSectionClasses() + props.getSectionGridClasses()} 
+        style={props.getSectionHeight()}>
         <div className="title-section top0 width100 height100 position-absolute col-xs-12">
           <Title />
           <DownArrow is_mobile={props.is_mobile} id_link="/#maps" />
@@ -21,7 +35,7 @@ const Home = (props) => {
       </div>
       <div 
         id="maps"
-        className={(props.is_mobile ? "padding-for-header-mobile" : "padding-for-header overflow-scroll second-section-border") + props.getSectionGridClasses()} 
+        className={getSecondSectionClasses() + props.getSectionGridClasses()} 
         style={props.getSectionHeight()} >
         <SearchBar 
           is_mobile={props.is_mobile}
