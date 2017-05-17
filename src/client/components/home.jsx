@@ -4,6 +4,7 @@ import Header from './header.jsx';
 import Title from './title.jsx';
 import SearchBar from './search_bar.jsx';
 import CitiesList from './cities_list.jsx';
+import DownArrow from './down_arrow.jsx';
 
 const Home = (props) => {
   const getSectionGridClasses = () => {
@@ -14,23 +15,13 @@ const Home = (props) => {
     return { height: props.window_height + 'px' };
   };
 
-  const getDownArrow = () => {
-    return (
-      <div className="down-arrow position-absolute width100 center-align">
-        <Link to="/#maps">
-          <i className="fa fa-chevron-circle-down fa-3x"></i>
-        </Link>
-      </div>
-    )
-  }
-
   return (
     <div className="col-xs-12">
       <Header back_button={false} email_form={true} />
       <div className={"center-align position0 overflow-hidden" + getSectionGridClasses()} style={getSectionStyle()}>
         <div className="title-section top0 width100 height100 position-absolute col-xs-12">
           <Title />
-          {props.is_mobile ? getDownArrow() : null}
+          <DownArrow is_mobile={props.is_mobile} id_link="/#maps" />
           <div className="map-background width100 position-absolute center-align">
             <img className="background-svg width100 position-relative bottom0 left0" src={"/img/world_map.svg"} alt="World Map"/>
           </div>
