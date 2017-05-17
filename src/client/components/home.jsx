@@ -1,16 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Header from './header.jsx';
-import Title from './title.jsx';
+import FixedSectionPanel from './fixed_section_panel.jsx';
 import SearchBar from './search_bar.jsx';
 import CitiesList from './cities_list.jsx';
-import DownArrow from './down_arrow.jsx';
 
 const Home = (props) => {
-  const getFirstSectionClasses = () => {
-    return "center-align position0 overflow-hidden";
-  }
-
   const getSecondSectionClasses = () => {
     if (props.is_mobile) {
       return "padding-for-header-mobile"
@@ -22,17 +17,19 @@ const Home = (props) => {
   return (
     <div className="col-xs-12">
       <Header back_button={false} email_form={true} />
-      <div 
-        className={getFirstSectionClasses() + props.getSectionGridClasses()} 
-        style={props.getSectionHeight()}>
-        <div className="title-section top0 width100 height100 position-absolute col-xs-12">
-          <Title />
-          <DownArrow is_mobile={props.is_mobile} id_link="/#maps" />
-          <div className="map-background width100 position-absolute center-align">
-            <img className="background-svg width100 position-relative bottom0 left0" src={"/img/world_map.svg"} alt="World Map"/>
-          </div>
-        </div>
-      </div>
+      <FixedSectionPanel 
+        classes={props.getSectionGridClasses()}
+        styles={props.getSectionHeight()}
+        is_mobile={props.is_mobile}
+        id_link="/#maps"
+        parent="home"
+        image="logo.svg"
+        subtitle="City guides crowdsourced from locals, travelers, blogs, and You*"
+        description={`
+          *Help contribute to our community! All general city maps are openly 
+          editable so that you can add new places or notes to make the next 
+          person's experience in that city all the better.`} 
+        background_image="/img/world_map.svg" />
       <div 
         id="maps"
         className={getSecondSectionClasses() + props.getSectionGridClasses()} 

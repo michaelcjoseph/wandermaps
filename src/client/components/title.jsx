@@ -1,19 +1,31 @@
 import React from 'react';
 
 const Title = (props) => {
+  const getTitle = () => {
+    if (props.parent == "home") {
+      return (
+        <img className="title-logo" src="/img/logo.svg" alt="Wander Maps" />
+      )
+    } else {
+      return (
+        <h1 className="title-subtext fat-font">
+          {props.title}
+        </h1>
+      )
+    }
+  }
+
   return (
     <div className="width100">
       <div className="title position-absolute center-align col-xs-12">
-        <img className="title-logo" src={"/img/logo.svg"} alt="Wander Maps" />
+        {getTitle()}
         <h4 className="title-subtext thin-font">
-          City guides crowdsourced from locals, travelers, blogs, and You*
+          {props.subtitle}
         </h4>
       </div>
       <div className="title-desc position-absolute">
         <p className="thin-font">
-          *Help contribute to our community! All general city maps are openly 
-          editable so that you can add new places or notes to make the next 
-          person's experience in that city all the better.
+          {props.description}
         </p>
       </div>
     </div>

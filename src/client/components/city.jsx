@@ -2,17 +2,37 @@ import React from 'react';
 import { Link } from 'react-router';
 import Header from './header.jsx';
 import MapsList from './maps_list.jsx';
+import FixedSectionPanel from './fixed_section_panel.jsx';
 
 const City = (props) => {
+  const getSecondSectionClasses = () => {
+    if (props.is_mobile) {
+      return "padding-for-header-mobile"
+    } else {
+      return "padding-for-header overflow-scroll second-section-border"
+    }
+  }
+
   const getMapsList = () => {
     return (
       <div className="col-xs-12">
         <Header back_button={true} back_route={"/"} email_form={true} />
-        <div className="center-align width100 padding-for-header col-xs-12">
-          <h1 className="fat-font">{props.route.city.city}</h1>
-          <h4 className="thin-font">{props.route.city.country}</h4>
+        <FixedSectionPanel 
+          classes={props.getSectionGridClasses()}
+          styles={props.getSectionHeight()}
+          is_mobile={props.is_mobile}
+          id_link={"/" + props.route.city.id + "/#" + props.route.city.city}
+          parent="city"
+          title={props.route.city.city}
+          subtitle={props.route.city.country}
+          description={""}
+          background_image={"/img/" + props.route.city.image} />
+        <div 
+          id={props.route.city.city}
+          className={getSecondSectionClasses() + props.getSectionGridClasses()}
+          style={props.getSectionHeight()}>
+          <MapsList city={props.route.city} />
         </div>
-        <MapsList city={props.route.city} />
       </div>
     )
   };
