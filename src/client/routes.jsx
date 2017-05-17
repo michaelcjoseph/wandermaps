@@ -2,21 +2,21 @@ import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 import Main from './containers/main.jsx';
 import Home from './components/home.jsx';
-import CityMaps from './components/city_maps.jsx';
-import CityMapView from './components/city_map_view.jsx';
+import City from './components/city.jsx';
+import CityMap from './components/city_map.jsx';
 import NotFoundPage from './components/not_found_page.jsx';
 import maps_data from './data/maps.js';
 
-const renderCityMapViewRoute = (city_map_view, i) => {
+const renderCityMapRoutes = (city_map, i) => {
   return (
-    <Route key={i} city_map_view={city_map_view} path={city_map_view.id} component={CityMapView} />
+    <Route key={i} city_map={city_map} path={city_map.id} component={CityMap} />
   )
 }
 
-const renderCityMapsRoute = (city_maps, i) => {
+const renderCityRoutes = (city, i) => {
   return (
-    <Route key={i} city_maps={city_maps} path={city_maps.id} component={CityMaps}>
-      {city_maps.maps.map(renderCityMapViewRoute, city_maps.id)}
+    <Route key={i} city={city} path={city.id} component={City}>
+      {city.maps.map(renderCityMapRoutes, city.id)}
     </Route>
   )
 }
@@ -24,7 +24,7 @@ const renderCityMapsRoute = (city_maps, i) => {
 const routes = (
   <Route path="/" component={Main}>
     <IndexRoute component={Home}/>
-    {maps_data.map(renderCityMapsRoute)}
+    {maps_data.map(renderCityRoutes)}
     <Route path='*' component={NotFoundPage}/>
   </Route>
 );

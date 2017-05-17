@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import Header from './header.jsx';
 import Title from './title.jsx';
 import SearchBar from './search_bar.jsx';
-import MapsList from './maps_list.jsx';
+import CitiesList from './cities_list.jsx';
 
 const Home = (props) => {
   const getSectionGridClasses = () => {
@@ -44,7 +44,7 @@ const Home = (props) => {
           is_mobile={props.is_mobile}
           search_value={props.search_value} 
           handleSearch={props.handleSearch} />
-        <MapsList is_mobile={props.is_mobile} maps_data={props.maps_data} />
+        <CitiesList is_mobile={props.is_mobile} maps_data={props.maps_data} />
       </div>
     </div>
   );

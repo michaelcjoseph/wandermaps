@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Header from './header.jsx';
-import CityMapView from './city_map_view.jsx';
+import CityMap from './city_map.jsx';
 
-const CityMap = (props) => {
+const City = (props) => {
   const getMapPrice = (price) => {
     return price ? ("$" + price) : "Free";
   };
@@ -23,7 +23,7 @@ const CityMap = (props) => {
   const getMapsListItem = (city_map_view, i) => {
     return (
       <li key={i} className="col-xs-12 col-sm-6">
-        <Link to={"/" + props.route.city_maps.id + "/" + city_map_view.id}>
+        <Link to={"/" + props.route.city.id + "/" + city_map_view.id}>
           <div className={getMapItemOuterClass(city_map_view.price) + " city-maps-item col-xs-10 col-md-8 col-lg-6"}>
             <div className={getMapItemInnerClass(city_map_view.price) + " city-maps-item-inner city-maps-item-padding col-xs-8"}>
               <p className="thin-font">{getMapType(city_map_view.price)}</p>
@@ -43,11 +43,11 @@ const CityMap = (props) => {
       <div className="col-xs-12">
         <Header back_button={true} back_route={"/"} email_form={true} />
         <div className="center-align width100 padding-for-header col-xs-12">
-          <h1 className="fat-font">{props.route.city_maps.city}</h1>
-          <h4 className="thin-font">{props.route.city_maps.country}</h4>
+          <h1 className="fat-font">{props.route.city.city}</h1>
+          <h4 className="thin-font">{props.route.city.country}</h4>
         </div>
         <ul className="city-maps-list col-xs-12">
-          {props.route.city_maps.maps.map(getMapsListItem)}
+          {props.route.city.maps.map(getMapsListItem)}
         </ul>
       </div>
     )
@@ -58,7 +58,7 @@ const CityMap = (props) => {
       <div>
         {React.cloneElement(
           props.children, {
-            city_id: props.route.city_maps.id,
+            city_id: props.route.city.id,
             window_height: props.window_height,
             is_mobile: props.is_mobile,
           }
@@ -82,4 +82,4 @@ const CityMap = (props) => {
   );
 }
 
-export default CityMap;
+export default City;

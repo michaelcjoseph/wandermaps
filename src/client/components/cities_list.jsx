@@ -1,14 +1,14 @@
 import React from 'react';
-import MapItem from './map_item.jsx';
+import CitiesListItem from './cities_list_item.jsx';
 
-const MapsList = (props) => {
+const CitiesList = (props) => {
   const searchBarFixedPadding = () => {
     return props.is_mobile ? "" : "padding-for-header";
   };
 
   const renderMapItem = (item, i) => {
     return (
-      <MapItem key={i} item={item} is_mobile={props.is_mobile} />
+      <CitiesListItem key={i} item={item} is_mobile={props.is_mobile} />
     )
   };
 
@@ -19,4 +19,4 @@ const MapsList = (props) => {
   );
 }
 
-export default MapsList;
+export default CitiesList;

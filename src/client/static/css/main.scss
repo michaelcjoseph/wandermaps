@@ -288,15 +288,15 @@ a {
   padding: 0.45em;
 }
 
-/* Map Lists */
+/* Cities Lists */
 
-/* Map Item */
+/* Cities List Item */
 
-.map-item {
+.cities-list-item {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.map-item-border {
+.cities-list-item-border {
   border-style: solid;
   border-color: $body-background-color;
   border-right-width: 2px;
@@ -305,7 +305,7 @@ a {
   border-bottom-width: 2px;
 }
 
-.map-item-border-mobile {
+.cities-list-item-border-mobile {
   border-style: solid;
   border-color: $body-background-color;
   border-right-width: 0px;
@@ -314,11 +314,11 @@ a {
   border-bottom-width: 2px;
 }
 
-.map-item:hover {
+.cities-list-item:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.map-item-img {
+.cities-list-item-img {
   min-width: 100%;
   max-width: 100%;
   height: auto;
@@ -326,7 +326,7 @@ a {
   opacity: 0.5;
 }
 
-.map-item-text {
+.cities-list-item-text {
   color: rgb(255, 255, 255);
   top: 50%;
   transform: translateY(-50%);

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './header.jsx';
 
-const CityMapView = (props) => {
+const CityMap = (props) => {
   const getCityMapBodyStyle = () => {
     return { height: props.window_height + 'px' };
   };
@@ -11,7 +11,7 @@ const CityMapView = (props) => {
   };
 
   const getCityMapBody = () => {
-    if (props.route.city_map_view.url.length > 0) {
+    if (props.route.city_map.url.length > 0) {
       return getCityMapFrame();
     } else {
       return getCityMapUnavailable();
@@ -20,7 +20,7 @@ const CityMapView = (props) => {
 
   const getCityMapFrame = () => {
     return (
-      <iframe src={props.route.city_map_view.url} width="100%" height="100%"></iframe>
+      <iframe src={props.route.city_map.url} width="100%" height="100%"></iframe>
     )
   };
 
@@ -54,4 +54,4 @@ const CityMapView = (props) => {
   );
 }
 
-export default CityMapView;
+export default CityMap;
