@@ -19,7 +19,7 @@ const MapsListItem = (props) => {
   };
 
   return (
-    <li key={props.id} className="col-xs-12 col-sm-6">
+    <li className="col-xs-12 col-sm-6">
       <Link to={"/" + props.city.id + "/" + props.city_map.id}>
         <div className={getMapItemOuterClass(props.city_map.price) + " city-maps-item col-xs-10 col-md-8 col-lg-6"}>
           <div className={getMapItemInnerClass(props.city_map.price) + " city-maps-item-inner city-maps-item-padding col-xs-8"}>

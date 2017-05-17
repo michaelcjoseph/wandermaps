@@ -19,15 +19,13 @@ const City = (props) => {
 
   const getMapView = () => {
     return ( 
-      <div>
-        {React.cloneElement(
-          props.children, {
-            city_id: props.route.city.id,
-            window_height: props.window_height,
-            is_mobile: props.is_mobile,
-          }
-        )}
-      </div>
+      React.cloneElement(
+        props.children, {
+          city_id: props.route.city.id,
+          window_height: props.window_height,
+          is_mobile: props.is_mobile,
+        }
+      )
     )
   }
 
@@ -40,9 +38,7 @@ const City = (props) => {
   }
 
   return (
-    <div className="col-xs-12">
-      {getCityView()}
-    </div>
+    getCityView()
   );
 }
 
