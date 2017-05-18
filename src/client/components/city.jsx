@@ -43,9 +43,10 @@ const City = (props) => {
         props.children, {
           city: props.route.city,
           is_mobile: props.is_mobile,
+          window_height: props.window_height,
           getSectionHeight: props.getSectionHeight,
-          getSectionGridClasses: props.getSectionGridClasses,
           getSecondSectionClasses: getSecondSectionClasses,
+          getSectionGridClasses: props.getSectionGridClasses,
         }
       )
     )
