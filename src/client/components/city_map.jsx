@@ -40,9 +40,9 @@ const CityMap = (props) => {
         is_mobile={props.is_mobile}
         id_link={"/" + props.city.id + "/" + props.route.city_map.id + "/#" + props.city.city}
         parent="city"
-        title={props.city.city}
-        subtitle={props.city.country}
-        description={""}
+        title={props.route.city_map.title}
+        subtitle={""}
+        description={props.route.city_map.description}
         background_image={"/img/" + props.city.image} />
       <div 
         id={props.city.city}

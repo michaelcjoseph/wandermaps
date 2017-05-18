@@ -25,7 +25,7 @@ const City = (props) => {
           parent="city"
           title={props.route.city.city}
           subtitle={props.route.city.country}
-          description={""}
+          description={props.route.city.description}
           background_image={"/img/" + props.route.city.image} />
         <div 
           id={props.route.city.city}

@@ -16,5 +16,5 @@ const MapsList = (props) => {
     </div>
   )
 }
-//city-maps-list 
+
 export default MapsList;
