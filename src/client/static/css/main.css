@@ -254,22 +254,19 @@ a {
   padding: 0; }
 
 /*** City ***/
-.city-maps-list {
-  padding: 3em; }
-
 .city-maps-item {
   height: 50%;
   border-style: solid;
-  border-width: 0px 2px 2px 0px;
+  border-width: 0px 4px 4px 0px;
   background-color: #F5F5F5;
   border-color: white;
   color: #2f2f2f; }
 
 .city-maps-item:hover {
-  color: #337ab7;
-  background-color: #FBFBFB; }
+  color: white;
+  background-color: #337ab7; }
   .city-maps-item:hover .city-maps-item-inner {
-    border-color: #e0e0e0; }
+    border-color: #F5F5F5; }
 
 .city-maps-item-inner {
   border-style: solid;
