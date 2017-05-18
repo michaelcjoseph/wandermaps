@@ -24,7 +24,7 @@ const Title = (props) => {
         </h4>
       </div>
       <div className="title-desc position-absolute">
-        <p className="thin-font">
+        <p className={props.parent == "home" ? "thin-font" : "fat-font"}>
           {props.description}
         </p>
       </div>
