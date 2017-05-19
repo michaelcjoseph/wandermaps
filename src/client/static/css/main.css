@@ -142,6 +142,9 @@ a {
   padding-top: 122px; }
 
 /* Title Section */
+.about-us-button {
+  padding: 14px; }
+
 .title-section {
   z-index: 99; }
 
@@ -171,7 +174,8 @@ a {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  opacity: 0.25; }
+  opacity: 0.25;
+  pointer-events: none; }
 
 .background-svg {
   max-height: 100%; }
@@ -287,5 +291,24 @@ a {
 
 .no-city-map-background {
   max-width: 700px; }
+
+/*** About Us ***/
+.main-side-padding {
+  padding-left: 2em;
+  padding-right: 2em; }
+
+.text-side-padding {
+  padding-left: 22em;
+  padding-right: 22em; }
+
+.close-button {
+  padding-top: 0.5em; }
+
+.header-margin {
+  margin-bottom: 1em; }
+
+.body-text {
+  font-size: 1.2em;
+  line-height: 1.8em; }
 
 /*# sourceMappingURL=main.css.map */
