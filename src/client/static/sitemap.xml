@@ -121,5 +121,6 @@
 <url> <loc>https://www.wandermaps.io/washington-dc-usa/one-day</loc> </url>
 <url> <loc>https://www.wandermaps.io/washington-dc-usa/two-day</loc> </url>
 <url> <loc>https://www.wandermaps.io/washington-dc-usa/three-day</loc> </url>
+<url> <loc>https://www.wandermaps.io/about_us</loc> </url>
 <url> <loc>https://www.wandermaps.io/*</loc> </url>
 </urlset>
