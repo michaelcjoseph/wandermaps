@@ -10,8 +10,9 @@ class EmailForm extends React.Component {
       email_submitted: false
     };
 
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.postEmail = this.postEmail.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.validateEmail = this.validateEmail.bind(this);
   }
 
   componentDidMount() {
@@ -23,11 +24,24 @@ class EmailForm extends React.Component {
 
     const { refs } = this;
     const email = refs.email.value;
-    console.log(email);
-    this.postEmail(email);
-    this.setState({
-      email_submitted: true
-    });
+    if (this.validateEmail(email)) {
+      this.postEmail(email);
+      this.setState({
+        email_submitted: true
+      });
+    } else {
+      console.log("Invalid email");
+    }
+  }
+
+  validateEmail(email) {
+    const regex_pattern = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+
+    if (regex_pattern.test(email)) {
+      return true
+    } else {
+      return false
+    }
   }
   
   postEmail(email) {
