@@ -8,7 +8,8 @@ class Main extends React.Component {
     this.state = {
       all_maps_data: maps_data,
       filtered_maps_data: maps_data,
-      search_value: ''
+      search_value: '',
+      prev_path: '',
     };
 
     this.handleSearch = this.handleSearch.bind(this);
@@ -29,6 +30,12 @@ class Main extends React.Component {
   // Remove event listeners initialized
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleWindowResize);
+  }
+
+  componentWillReceiveProps(next_props) {
+    if (next_props.location !== this.props.location) {
+      this.setState({ prev_path: this.props.location })
+    }
   }
 
   handleWindowResize() {
@@ -71,10 +78,10 @@ class Main extends React.Component {
   renderChildrenWithProps() {
     const childrenWithProps = React.Children.map(this.props.children,
       (child) => React.cloneElement(child, {
-        window_height: this.state.window_height,
-        is_mobile: (this.state.window_width <= 991),
-        maps_data: this.state.filtered_maps_data,
+        prev_path: this.state.prev_path,
         search_value: this.state.search_value,
+        maps_data: this.state.filtered_maps_data,
+        is_mobile: (this.state.window_width <= 991),
         handleSearch: this.handleSearch,
         getSectionGridClasses: this.getSectionGridClasses,
         getSectionHeight: this.getSectionHeight

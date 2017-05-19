@@ -9,7 +9,7 @@ const AboutUs = (props) => {
   return (
     <div className="col-xs-12 main-side-padding">
       <div className="right-align">
-        <Link to="/">
+        <Link to={props.prev_path}>
             <i className="fa fa-times fa-3x close-button"></i>
           </Link>
       </div>
