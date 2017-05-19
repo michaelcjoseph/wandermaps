@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import Title from './title.jsx';
 import DownArrow from './down_arrow.jsx';
 
@@ -28,13 +29,18 @@ const FixedSectionPanel = (props) => {
   return (
     <div className={"center-align position0 overflow-hidden" + props.classes} style={props.styles}>
       <div className="title-section top0 width100 height100 position-absolute col-xs-12">
+        {getBackgroundImage()}
+        <div className={(props.is_mobile ? "padding-for-header-mobile" : "padding-for-header") + " zindex100 right-align"}>
+          <Link to="/about_us">
+            <i className="fa fa-question-circle-o fa-3x about-us-button"></i>
+          </Link>
+        </div>
         <Title 
           parent={props.parent}
           image={props.image} 
           title={props.title}
           subtitle={props.subtitle} 
           description={props.description} />
-        {getBackgroundImage()}
         <DownArrow 
           is_mobile={props.is_mobile} 
           id_link={props.id_link} />

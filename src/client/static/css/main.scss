@@ -197,6 +197,10 @@ a {
 
 /* Title Section */
 
+.about-us-button {
+  padding: 14px;
+}
+
 .title-section {
   z-index: 99;
 }
@@ -234,6 +238,7 @@ a {
   top: 50%;
   left: 50%;
   opacity: 0.25;
+  pointer-events: none;
 }
 
 .background-svg {
