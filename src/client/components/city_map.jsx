@@ -5,7 +5,7 @@ import FixedSectionPanel from './fixed_section_panel.jsx';
 const CityMap = (props) => {
   const getCityMapFrame = () => {
     return (
-      <iframe src={props.route.city_map.url} width="100%" height="100%"></iframe>
+      <iframe src={props.city_map.url} width="100%" height="100%"></iframe>
     )
   };
 
@@ -21,7 +21,7 @@ const CityMap = (props) => {
   };
 
   const getCityMapBody = () => {
-    if (props.route.city_map.url.length > 0) {
+    if (props.city_map.url.length > 0) {
       return getCityMapFrame();
     } else {
       return getCityMapUnavailable();
@@ -38,11 +38,11 @@ const CityMap = (props) => {
         classes={props.getSectionGridClasses()}
         styles={props.getSectionHeight()}
         is_mobile={props.is_mobile}
-        id_link={"/" + props.city.id + "/" + props.route.city_map.id + "/#" + props.city.city}
+        id_link={"/" + props.city.id + "/" + props.city_map.id + "/#" + props.city.city}
         parent="city"
-        title={props.route.city_map.title}
+        title={props.city_map.title}
         subtitle={""}
-        description={props.route.city_map.description}
+        description={props.city_map.description}
         background_image={"/img/" + props.city.image} />
       <div 
         id={props.city.city}
