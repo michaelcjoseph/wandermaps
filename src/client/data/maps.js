@@ -29,7 +29,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy Barcelona in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=1O3eP1ejl4Pu4CPt1hRLlsiNOCOA",
         "price": 2
       },
       {
@@ -41,7 +41,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy Barcelona in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=1OnE3n3yMaXn4n98g60cefDfCONw",
         "price": 2
       },
       {
@@ -53,7 +53,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy Barcelona in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=12PnIOwqybfT-uyA7u4uiq7ugMaA",
         "price": 2
       }
     ]
@@ -143,7 +143,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy Copenhagen in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=1hkoBMybY6wRM2hl5qXCPdRZr-6M",
         "price": 2
       },
       {
@@ -155,7 +155,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy Copenhagen in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=12BxQlZTDpyBoNBFIWK5PPJVHuVw",
         "price": 2
       },
       {
@@ -257,7 +257,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy Kyoto in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=1hIWOe1pVUuSqnGOOlXQ9mYQdu_A",
         "price": 2
       },
       {
@@ -269,7 +269,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy Kyoto in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=1t3Di8MATzja1zrkycQDU07IfPDo",
         "price": 2
       },
       {
@@ -281,7 +281,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy Kyoto in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=1kRNq0BiweEdM2UE6w9vvjGw9VEs",
         "price": 2
       }
     ]
@@ -314,7 +314,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy London in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=13gz7QhmgkrCN4zd1Ahcj6YepAWg",
         "price": 2
       },
       {
@@ -326,7 +326,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy London in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=12cNGmsaFxIVCTtMeI5ooTZFCt_M",
         "price": 2
       },
       {
@@ -338,7 +338,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy London in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=1iq9a1bswB1UPwgA2jnOaMBdPLEo",
         "price": 2
       }
     ]
@@ -371,7 +371,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy Madrid in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=1S0X9UwJnaBUQgux2Mo4WEuZCAGc",
         "price": 2
       },
       {
@@ -383,7 +383,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy Madrid in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=1dLK5PBaFT6tYUpz_AuscoKfrNsA",
         "price": 2
       },
       {
@@ -485,7 +485,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy Paris in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=1h7_yo3BY8gk_J74lmeUcvT1az0k",
         "price": 2
       },
       {
@@ -497,7 +497,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy Paris in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=15l9biULVj2SKtWVa68mbCkmDsps",
         "price": 2
       },
       {
@@ -509,7 +509,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy Paris in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=1NLxBBMaN6-1E9xoAGe_Sv2WDksU",
         "price": 2
       }
     ]
@@ -542,7 +542,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy Tokyo in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=1EWXVDf30Htld20haAp3tsEahIBs",
         "price": 2
       },
       {
@@ -554,7 +554,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy Tokyo in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=1sU6PX8_6CN-U5U2KE-PfqjlN86o",
         "price": 2
       },
       {
@@ -566,7 +566,7 @@ const maps = [
           places are ordered by things to do/see from first to last. The map
           will make it easier and faster to enjoy Tokyo in the time
           that you have!`,
-        "url": "",
+        "url": "https://www.google.com/maps/d/embed?mid=1cCGSHfjivw6D7JwWVSIluenQZVU",
         "price": 2
       }
     ]
