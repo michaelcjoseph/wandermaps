@@ -1,14 +1,10 @@
 import React from 'react';
 import Header from './header.jsx';
 import FixedSectionPanel from './fixed_section_panel.jsx';
+import CityMapFree from './city_map_free.jsx';
+import CityMapPaid from './city_map_paid.jsx';
 
 const CityMap = (props) => {
-  const getCityMapFrame = () => {
-    return (
-      <iframe src={props.route.city_map.url} width="100%" height="100%"></iframe>
-    )
-  };
-
   const getCityMapUnavailable = () => {
     return (
       <div className="col-xs-12 center-align padding-for-header">
@@ -22,7 +18,11 @@ const CityMap = (props) => {
 
   const getCityMapBody = () => {
     if (props.route.city_map.url.length > 0) {
-      return getCityMapFrame();
+      if (props.route.city_map.paid) {
+        return <CityMapPaid url={props.route.city_map.url} />;
+      } else {
+        return <CityMapFree url={props.route.city_map.url} />;
+      }
     } else {
       return getCityMapUnavailable();
     };
