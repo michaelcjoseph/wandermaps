@@ -21,7 +21,7 @@ const CityMap = (props) => {
       if (props.route.city_map.price) {
         return (
           <PaidMap
-            city={props.city.city}
+            city={props.city.id}
             map_id={props.route.city_map.id}
             map_url={props.route.city_map.url} 
             price={props.route.city_map.price} />
