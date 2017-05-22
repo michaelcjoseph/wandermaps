@@ -8,7 +8,7 @@ class EmailSubscribe extends React.Component {
       url: '/api/emails',
       method: 'post',
       data: { email: email },
-      success: function() {
+      success: () => {
         console.log(email + ' added to list of subscribed emails.');
       }
     });
