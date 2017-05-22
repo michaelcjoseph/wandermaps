@@ -7,13 +7,24 @@ class PaidMap extends React.Component {
     super(props);
 
     this.state = {
-      email: ''
+      is_map_paid: false
     };
+  }
+
+  handleEmailFormSubmit(email) {
+    this.setState({
+      is_map_paid: true
+    });
+    
+    console.log(email);
   }
 
   render() {
     return (
-      <CityMapPaid />
+      <CityMapPaid
+        map_url={this.props.map_url} 
+        is_map_paid={this.state.is_map_paid} 
+        handleSubmit={this.handleEmailFormSubmit.bind(this)} />
     )
   }
 }

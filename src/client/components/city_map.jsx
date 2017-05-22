@@ -19,7 +19,13 @@ const CityMap = (props) => {
   const getCityMapBody = () => {
     if (props.route.city_map.url.length > 0) {
       if (props.route.city_map.price) {
-        return <PaidMap url={props.route.city_map.url} />;
+        return (
+          <PaidMap
+            city={props.city.city}
+            map_id={props.route.city_map.id}
+            map_url={props.route.city_map.url} 
+            price={props.route.city_map.price} />
+        );
       } else {
         return <CityMapFree url={props.route.city_map.url} />;
       }
