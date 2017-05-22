@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import EmailForm from '../containers/email_form.jsx';
+import EmailSubscribe from '../containers/email_subscribe.jsx';
 
 const Header = (props) => {
   const getBackButton = () => {
@@ -25,7 +25,7 @@ const Header = (props) => {
           <p className="header-text"><strong>Don't miss out! Get updates on cities!</strong></p>
         </div>
         <div className="position-relative">
-          <EmailForm />
+          <EmailSubscribe />
         </div>
       </div>
     )

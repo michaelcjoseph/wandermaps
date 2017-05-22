@@ -1,5 +1,4 @@
 import React from 'react';
-import Reqwest from 'reqwest';
 import { Row, Col, FormGroup, Button } from 'react-bootstrap';
 
 class EmailForm extends React.Component {
@@ -10,7 +9,6 @@ class EmailForm extends React.Component {
       email_submitted: false
     };
 
-    this.postEmail = this.postEmail.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.validateEmail = this.validateEmail.bind(this);
   }
@@ -25,7 +23,7 @@ class EmailForm extends React.Component {
     const { refs } = this;
     const email = refs.email.value;
     if (this.validateEmail(email)) {
-      this.postEmail(email);
+      this.props.handleSubmit(email);
       this.setState({
         email_submitted: true
       });
@@ -44,17 +42,6 @@ class EmailForm extends React.Component {
     }
   }
   
-  postEmail(email) {
-    Reqwest({
-      url: '/api/emails',
-      method: 'post',
-      data: { email: email },
-      success: function() {
-        console.log(email + ' added to list of subscribed emails.');
-      }
-    });
-  }
-  
   renderForm() {
     return (
       <form className="col-xs-12" onSubmit={ this.handleSubmit }>
@@ -70,7 +57,7 @@ class EmailForm extends React.Component {
             </FormGroup>
           </Col>
           <Col xs={ 4 }>
-            <Button type="submit" bsStyle="primary" block>Subscribe</Button>
+            <Button type="submit" bsStyle="primary" block>{this.props.button_text}</Button>
           </Col>
         </div>
       </form>
@@ -80,7 +67,7 @@ class EmailForm extends React.Component {
   renderThankYou() {
     return (
       <div className="col-xs-12">
-        <p className="header-text"><strong>Thanks! We'll email you with news.</strong></p>
+        <p className="header-text"><strong>{this.props.email_submitted_text}</strong></p>
       </div>
     )
   }
