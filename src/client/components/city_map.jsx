@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './header.jsx';
 import FixedSectionPanel from './fixed_section_panel.jsx';
 import CityMapFree from './city_map_free.jsx';
-import CityMapPaid from './city_map_paid.jsx';
+import PaidMap from '../containers/paid_map.jsx';
 
 const CityMap = (props) => {
   const getCityMapUnavailable = () => {
@@ -19,7 +19,7 @@ const CityMap = (props) => {
   const getCityMapBody = () => {
     if (props.route.city_map.url.length > 0) {
       if (props.route.city_map.price) {
-        return <CityMapPaid url={props.route.city_map.url} />;
+        return <PaidMap url={props.route.city_map.url} />;
       } else {
         return <CityMapFree url={props.route.city_map.url} />;
       }
