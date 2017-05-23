@@ -16,6 +16,7 @@ class PaidMap extends React.Component {
     this.getUser = this.getUser.bind(this);
     this.addUser = this.addUser.bind(this);
     this.getPurchasedMap = this.getPurchasedMap.bind(this);
+    this.handleStripePurchase = this.handleStripePurchase.bind(this);
   }
 
   handleEmailFormSubmit(email) {
@@ -80,6 +81,11 @@ class PaidMap extends React.Component {
     });
   }
 
+  handleStripePurchase(token) {
+    console.log(token);
+    console.log("Get Stripe token");
+  }
+
   render() {
     return (
       <CityMapPaid
@@ -88,7 +94,8 @@ class PaidMap extends React.Component {
         map_url={this.props.map_url} 
         is_map_paid={this.state.is_map_paid} 
         show_stripe_button={this.state.show_stripe_button}
-        handleSubmit={this.handleEmailFormSubmit} />
+        handleSubmit={this.handleEmailFormSubmit}
+        handleStripePurchase={this.handleStripePurchase} />
     )
   }
 }

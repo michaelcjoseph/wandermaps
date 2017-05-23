@@ -16,20 +16,16 @@ const CityMapPaid = (props) => {
     );
   };
 
-  const handleStripeToken = () => {
-    console.log("Get Stripe token");
-  };
-
   const getStripeButton = () => {
     return (
       <div>
         <StripeCheckout 
-          token={handleStripeToken}
+          token={props.handleStripePurchase}
           stripeKey="pk_test_rfchwmVIIdCU2qLr1w4Wbr8t"
           name="Wander Maps"
           description={"Purchase Map: " + props.map_title}
           image="https://stripe.com/img/documentation/checkout/marketplace.png"
-          panelLabel="Purchase"
+          panelLabel="Pay"
           amount={200}
           currency="USD"
           locale="auto"
