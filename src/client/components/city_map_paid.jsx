@@ -21,7 +21,7 @@ const CityMapPaid = (props) => {
       <div>
         <StripeCheckout 
           token={props.handleStripePurchase}
-          stripeKey="pk_test_rfchwmVIIdCU2qLr1w4Wbr8t"
+          stripeKey="pk_live_CePqZWCB5G6DfdUj6wJudDTj"
           name="Wander Maps"
           description={"Purchase Map: " + props.map_title}
           image="https://stripe.com/img/documentation/checkout/marketplace.png"
