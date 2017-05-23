@@ -97,11 +97,13 @@ class PaidMap extends React.Component {
         stripe_token_id: token.id,
         amount: this.props.price
       },
-      success: () => {
-        this.setState({
-          show_stripe_button: false,
-          is_map_paid: true
-        })
+      success: (purchased_map) => {
+        if (purchased_map.id) {
+          this.setState({
+            show_stripe_button: false,
+            is_map_paid: true
+          });
+        }
       }
     });
   }

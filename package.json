@@ -8,8 +8,8 @@
     "devserve": "webpack-dev-server --progress --colors",
     "build": "NODE_ENV=production webpack -p --config ./webpack.config.js --progress --colors",
     "postinstall": "npm run build",
-    "start": "NODE_ENV=production babel-node -- src/server.js",
-    "start:dev": "NODE_ENV=development babel-node -- src/server.js"
+    "start": "NODE_ENV=production STRIPE_SECRET_KEY=sk_live_yW4Zz5igmM5q4lFCLKWC1mUx babel-node -- src/server.js",
+    "start:dev": "NODE_ENV=development STRIPE_SECRET_KEY=sk_test_pSkzzbEOMupTz1cqxGrcFbZO babel-node -- src/server.js"
   },
   "engines": {
     "node": "^6.10.2",
