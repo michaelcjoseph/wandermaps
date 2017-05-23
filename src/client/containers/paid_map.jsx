@@ -8,6 +8,7 @@ class PaidMap extends React.Component {
 
     this.state = {
       email: '',
+      user_id: 0,
       show_stripe_button: false,
       is_map_paid: false
     };
@@ -48,8 +49,9 @@ class PaidMap extends React.Component {
       url: '/api/emails',
       method: 'post',
       data: { email: email },
-      success: () => {
+      success: (user) => {
         this.setState({
+          user_id: user.id,
           show_stripe_button: true,
           is_map_paid: false
         });
@@ -68,11 +70,13 @@ class PaidMap extends React.Component {
       success: (purchased_map) => {
         if (purchased_map.id) {
           this.setState({
+            user_id: user_id,
             show_stripe_button: false,
             is_map_paid: true
           });
         } else {
           this.setState({
+            user_id: user_id,
             show_stripe_button: true,
             is_map_paid: false
           });
@@ -82,8 +86,24 @@ class PaidMap extends React.Component {
   }
 
   handleStripePurchase(token) {
-    console.log(token);
-    console.log("Get Stripe token");
+    Reqwest({
+      url: '/api/purchased_maps',
+      method: 'post',
+      data: {
+        city: this.props.city,
+        city_map_id: this.props.map_id,
+        user_id: this.state.user_id,
+        user_email: this.state.email,
+        stripe_token_id: token.id,
+        amount: this.props.price
+      },
+      success: () => {
+        this.setState({
+          show_stripe_button: false,
+          is_map_paid: true
+        })
+      }
+    });
   }
 
   render() {
@@ -92,6 +112,7 @@ class PaidMap extends React.Component {
         user_email={this.state.email}
         map_title={this.props.map_title}
         map_url={this.props.map_url} 
+        price={this.props.price}
         is_map_paid={this.state.is_map_paid} 
         show_stripe_button={this.state.show_stripe_button}
         handleSubmit={this.handleEmailFormSubmit}

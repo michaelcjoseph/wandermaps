@@ -25,7 +25,7 @@ const CityMap = (props) => {
             map_title={props.route.city_map.title}
             map_id={props.route.city_map.id}
             map_url={props.route.city_map.url} 
-            price={props.route.city_map.price} />
+            price={props.route.city_map.price * 100} />
         );
       } else {
         return <CityMapFree url={props.route.city_map.url} />;

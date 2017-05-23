@@ -26,7 +26,7 @@ const CityMapPaid = (props) => {
           description={"Purchase Map: " + props.map_title}
           image="https://stripe.com/img/documentation/checkout/marketplace.png"
           panelLabel="Pay"
-          amount={200}
+          amount={props.price}
           currency="USD"
           locale="auto"
           zipCode={true}
