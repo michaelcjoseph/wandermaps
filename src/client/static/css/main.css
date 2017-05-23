@@ -285,6 +285,15 @@ a {
   padding: 1em; }
 
 /*** City Map ***/
+.input-padding {
+  padding-top: 15px;
+  padding-left: 1em;
+  padding-right: 1em; }
+
+.action-item-margin {
+  margin-top: 1em;
+  margin-bottom: 2em; }
+
 .no-city-map-logo {
   width: 50%;
   max-height: 200px; }
