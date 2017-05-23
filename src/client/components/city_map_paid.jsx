@@ -1,5 +1,6 @@
 import React from 'react';
 import EmailForm from '../containers/email_form.jsx';
+import Stripe from '../containers/stripe.jsx';
 
 const CityMapPaid = (props) => {
   const getMap = () => {
@@ -17,7 +18,10 @@ const CityMapPaid = (props) => {
 
   const getStripeButton = () => {
     return (
-      <div>Stripe Button</div>
+      <div>
+        Stripe Button
+        <Stripe />
+      </div>
     );
   };
 
