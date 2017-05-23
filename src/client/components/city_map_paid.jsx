@@ -1,6 +1,6 @@
 import React from 'react';
+import StripeCheckout from 'react-stripe-checkout';
 import EmailForm from '../containers/email_form.jsx';
-import Stripe from '../containers/stripe.jsx';
 
 const CityMapPaid = (props) => {
   const getMap = () => {
@@ -16,11 +16,27 @@ const CityMapPaid = (props) => {
     );
   };
 
+  const handleStripeToken = () => {
+    console.log("Get Stripe token");
+  };
+
   const getStripeButton = () => {
     return (
       <div>
-        Stripe Button
-        <Stripe />
+        <StripeCheckout 
+          token={handleStripeToken}
+          stripeKey="pk_test_rfchwmVIIdCU2qLr1w4Wbr8t"
+          name="Wander Maps"
+          description={"Purchase Map: " + props.map_title}
+          image="https://stripe.com/img/documentation/checkout/marketplace.png"
+          panelLabel="Purchase"
+          amount={200}
+          currency="USD"
+          locale="auto"
+          zipCode={true}
+          allowRememberMe={true}
+          email={props.user_email}
+          />
       </div>
     );
   };

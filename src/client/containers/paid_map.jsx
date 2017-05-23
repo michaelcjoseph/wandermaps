@@ -7,6 +7,7 @@ class PaidMap extends React.Component {
     super(props);
 
     this.state = {
+      email: '',
       show_stripe_button: false,
       is_map_paid: false
     };
@@ -18,6 +19,10 @@ class PaidMap extends React.Component {
   }
 
   handleEmailFormSubmit(email) {
+    this.setState({
+      email: email
+    });
+
     this.getUser(email);
   }
 
@@ -78,6 +83,8 @@ class PaidMap extends React.Component {
   render() {
     return (
       <CityMapPaid
+        user_email={this.state.email}
+        map_title={this.props.map_title}
         map_url={this.props.map_url} 
         is_map_paid={this.state.is_map_paid} 
         show_stripe_button={this.state.show_stripe_button}
