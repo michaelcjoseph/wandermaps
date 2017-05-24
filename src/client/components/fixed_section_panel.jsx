@@ -2,34 +2,23 @@ import React from 'react';
 import { Link } from 'react-router';
 import Title from './title.jsx';
 import DownArrow from './down_arrow.jsx';
+import LazyLoadImg from './lazy_load_img.jsx';
 
 const FixedSectionPanel = (props) => {
-  const getBackgroundImage = () => {
-    if (props.parent == "home") {
-      return (
-        <div className="map-background width100 position-absolute center-align">
-          <img 
-            className="background-svg width100 position-relative bottom0 left0" 
-            src={props.background_image} 
-            alt="World Map" />
-        </div>
-      )
-    } else {
-      return (
-        <div className="map-background height100 width100 position-absolute center-align">
-          <img 
-            className="height100" 
-            src={props.background_image} 
-            alt="World Map" />
-        </div>
-      )
-    }
-  }
-
   return (
     <div className={"center-align position0 overflow-hidden" + props.classes} style={props.styles}>
       <div className="title-section top0 width100 height100 position-absolute col-xs-12">
-        {getBackgroundImage()}
+        <div 
+          className={
+            "map-background width100 position-absolute center-align " + 
+            (props.parent == "home" ? "" : "height100")
+          }>
+          <img 
+            className={props.parent == "home" ? "background-svg width100 position-relative bottom0 left0" : "height100"}
+            src={props.background_image}
+            alt="World Map"
+          />
+        </div>
         <div className={(props.is_mobile ? "padding-for-header-mobile" : "padding-for-header") + " zindex100 right-align"}>
           <Link to="/about_us">
             <i className="fa fa-question-circle-o fa-3x about-us-button"></i>

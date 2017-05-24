@@ -1,5 +1,4 @@
 import React from 'react';
-import LazyLoad from 'react-lazyload';
 import CitiesListItem from './cities_list_item.jsx';
 
 const CitiesList = (props) => {
