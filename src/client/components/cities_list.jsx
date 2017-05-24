@@ -18,7 +18,6 @@ const CitiesList = (props) => {
 
   return (
     <div className={"col-xs-12 " + searchBarFixedPadding()}>
-      {console.log(props.is_mobile)}
       {props.maps_data.map(renderMapItem)}
     </div>
   );
