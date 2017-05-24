@@ -48,6 +48,14 @@ if (process.env.NODE_ENV == 'production') {
 // Require api routes for application
 require('./server/routes')(app);
 
+// Serve GZIP'd JS file
+app.get('*.js', (req, res, next) => {
+  req.url = req.url + '.gz';
+  res.set('Content-Encoding', 'gzip');
+  res.set('Content-Type', 'text/javascript');
+  next();
+});
+
 // universal routing and rendering
 app.get('*', (req, res) => {
   match(
