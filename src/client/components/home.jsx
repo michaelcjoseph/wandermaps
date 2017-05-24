@@ -10,7 +10,7 @@ const Home = (props) => {
     if (props.is_mobile) {
       return "padding-for-header-mobile"
     } else {
-      return "padding-for-header overflow-scroll second-section-border"
+      return "padding-for-header second-section-border"
     }
   };
 
@@ -32,13 +32,16 @@ const Home = (props) => {
         background_image="/img/world_map.svg" />
       <div 
         id="maps"
-        className={getSecondSectionClasses() + props.getSectionGridClasses()} 
-        style={props.getSectionHeight()} >
+        className={"overflow-scroll position-relative " + getSecondSectionClasses() + props.getSectionGridClasses()} 
+        style={props.is_mobile ? null : props.getSectionHeight()} >
         <SearchBar 
           is_mobile={props.is_mobile}
           search_value={props.search_value} 
           handleSearch={props.handleSearch} />
-        <CitiesList is_mobile={props.is_mobile} maps_data={props.maps_data} />
+        <CitiesList 
+          is_mobile={props.is_mobile} 
+          maps_data={props.maps_data} 
+          window_width={props.window_width} />
       </div>
     </div>
   );

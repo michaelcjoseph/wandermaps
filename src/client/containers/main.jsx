@@ -80,6 +80,7 @@ class Main extends React.Component {
       (child) => React.cloneElement(child, {
         prev_path: this.state.prev_path,
         search_value: this.state.search_value,
+        window_width: this.state.window_width,
         maps_data: this.state.filtered_maps_data,
         is_mobile: (this.state.window_width <= 991),
         handleSearch: this.handleSearch,

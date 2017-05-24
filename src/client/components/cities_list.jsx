@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 import CitiesListItem from './cities_list_item.jsx';
 
 const CitiesList = (props) => {
@@ -8,12 +9,17 @@ const CitiesList = (props) => {
 
   const renderMapItem = (item, i) => {
     return (
-      <CitiesListItem key={i} item={item} is_mobile={props.is_mobile} />
+      <CitiesListItem 
+        key={i}
+        item={item} 
+        is_mobile={props.is_mobile} 
+        window_width={props.window_width} />
     )
   };
 
   return (
-    <div className={searchBarFixedPadding() + " col-xs-12"}>
+    <div className={"col-xs-12 " + searchBarFixedPadding()}>
+      {console.log(props.is_mobile)}
       {props.maps_data.map(renderMapItem)}
     </div>
   );
