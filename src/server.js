@@ -17,8 +17,10 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'client', 'views'));
 
 // define the folder that will be used for static assets
-// app.use(Express.static(path.join(__dirname, 'client', 'static')));
-app.use(expressStaticGzip(path.join(__dirname, 'client', 'static')));
+app.use(expressStaticGzip(
+  path.join(__dirname, 'client', 'static'), 
+  { indexFromEmptyFile: false }
+));
 
 // Set up morgan and body-parser
 app.use(logger('dev'));
