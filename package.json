@@ -9,8 +9,9 @@
     "build:js": "NODE_ENV=production webpack -p --config ./webpack.prod.config.js --progress --colors",
     "convert:sass": "node-sass src/client/static/css/main.scss src/client/static/css/main.css",
     "minify:css": "cssnano src/client/static/css/main.css src/client/static/css/main.min.css",
+    "minify:img": "imagemin src/client/static/img/raw-png/* --out-dir=src/client/static/img/min-png",
     "build:css": "npm run convert:sass && npm run minify:css",
-    "postinstall": "npm run build:js && npm run build:css",
+    "postinstall": "npm run build:js && npm run build:css && npm run minify:img",
     "start": "NODE_ENV=production STRIPE_SECRET_KEY=sk_live_yW4Zz5igmM5q4lFCLKWC1mUx babel-node -- src/server.js",
     "start:dev": "NODE_ENV=development STRIPE_SECRET_KEY=sk_test_pSkzzbEOMupTz1cqxGrcFbZO babel-node -- src/server.js"
   },
@@ -40,6 +41,7 @@
     "express": "^4.15.2",
     "express-static-gzip": "^0.2.2",
     "http-server": "^0.10.0",
+    "imagemin-cli": "^3.0.0",
     "morgan": "^1.8.1",
     "node-sass": "^4.5.3",
     "pg": "^6.2.2",
