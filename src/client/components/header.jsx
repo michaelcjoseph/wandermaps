@@ -35,7 +35,7 @@ const Header = (props) => {
     return (
       <div className="center-align display-flex flex-vertically-center flex-horizontally-center flex-wrap">
         {getBackButton()}
-        <img className="header-logo-text" src={"/img/logo-text.svg"} alt="Wander Maps" />
+        <img className="header-logo-text" src={"/img/svg/logo-text.svg"} alt="Wander Maps" />
       </div>
     )
   }

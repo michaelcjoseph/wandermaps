@@ -26,7 +26,7 @@ const City = (props) => {
           title={props.route.city.city}
           subtitle={props.route.city.country}
           description={props.route.city.description}
-          background_image={"/img/" + props.route.city.image} />
+          background_image={"/img/min-png/" + props.route.city.image} />
         <div 
           id={props.route.city.city}
           className={getSecondSectionClasses() + props.getSectionGridClasses()}

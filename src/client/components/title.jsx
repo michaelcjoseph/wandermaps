@@ -4,7 +4,7 @@ const Title = (props) => {
   const getTitle = () => {
     if (props.parent == "home") {
       return (
-        <img className="title-logo" src="/img/logo.svg" alt="Wander Maps" />
+        <img className="title-logo" src="/img/svg/logo.svg" alt="Wander Maps" />
       )
     } else {
       return (

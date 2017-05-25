@@ -50,7 +50,7 @@ const CityMap = (props) => {
         title={props.route.city_map.title}
         subtitle={""}
         description={props.route.city_map.description}
-        background_image={"/img/" + props.city.image} />
+        background_image={"/img/min-png/" + props.city.image} />
       <div 
         id={props.city.city}
         className={props.getSecondSectionClasses() + props.getSectionGridClasses()}

@@ -29,7 +29,7 @@ const Home = (props) => {
           *Help contribute to our community! All general city maps are openly 
           editable so that you can add new places or notes to make the next 
           person's experience in that city all the better.`} 
-        background_image="/img/world_map.svg" />
+        background_image="/img/svg/world_map.svg" />
       <div 
         id="maps"
         className={"overflow-scroll position-relative " + getSecondSectionClasses() + props.getSectionGridClasses()} 

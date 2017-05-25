@@ -12,7 +12,7 @@ const CitiesListItem = (props) => {
   };
 
   const getImageUrl = () => {
-    return ('/img/' + props.item.image);
+    return ('/img/min-png/' + props.item.image);
   };
 
   const getItemHeight = () => {
