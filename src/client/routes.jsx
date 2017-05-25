@@ -27,7 +27,7 @@ const routes = (
     <IndexRoute component={Home}/>
     {maps_data.map(renderCityRoutes)}
     <Route path='/about_us' component={AboutUs}/>
-    <Route path='*' component={NotFoundPage}/>
+    <Route path='*' component={Home}/>
   </Route>
 );
 
