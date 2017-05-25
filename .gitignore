@@ -4,3 +4,4 @@ npm-debug.log
 src/client/static/js
 .sass-cache/
 src/client/static/css/main.css
+src/client/static/css/main.min.css

@@ -7,7 +7,9 @@
     "sitemap": "babel-node -- src/sitemap_builder.js",
     "devserve": "webpack-dev-server --config webpack.dev.config.js --progress --colors",
     "build:js": "NODE_ENV=production webpack -p --config ./webpack.prod.config.js --progress --colors",
-    "build:css": "node-sass src/client/static/css/main.scss src/client/static/css/main.css",
+    "convert:sass": "node-sass src/client/static/css/main.scss src/client/static/css/main.css",
+    "minify:css": "cssnano src/client/static/css/main.css src/client/static/css/main.min.css",
+    "build:css": "npm run convert:sass && npm run minify:css",
     "postinstall": "npm run build:js && npm run build:css",
     "start": "NODE_ENV=production STRIPE_SECRET_KEY=sk_live_yW4Zz5igmM5q4lFCLKWC1mUx babel-node -- src/server.js",
     "start:dev": "NODE_ENV=development STRIPE_SECRET_KEY=sk_test_pSkzzbEOMupTz1cqxGrcFbZO babel-node -- src/server.js"
@@ -32,6 +34,7 @@
     "body-parser": "^1.17.1",
     "compression-webpack-plugin": "^0.4.0",
     "css-loader": "^0.28.0",
+    "cssnano-cli": "^1.0.5",
     "ejs": "^2.5.6",
     "express": "^4.15.2",
     "express-static-gzip": "^0.2.2",
