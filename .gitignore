@@ -3,3 +3,4 @@ node_modules
 npm-debug.log
 src/client/static/js
 .sass-cache/
+src/client/static/css/main.css
