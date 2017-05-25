@@ -3,6 +3,7 @@ import { Server } from 'http';
 import Express from 'express';
 import logger from 'morgan';
 import bodyParser from 'body-parser';
+import expressStaticGzip from 'express-static-gzip';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
@@ -16,7 +17,8 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'client', 'views'));
 
 // define the folder that will be used for static assets
-app.use(Express.static(path.join(__dirname, 'client', 'static')));
+// app.use(Express.static(path.join(__dirname, 'client', 'static')));
+app.use(expressStaticGzip(path.join(__dirname, 'client', 'static')));
 
 // Set up morgan and body-parser
 app.use(logger('dev'));
@@ -47,14 +49,6 @@ if (process.env.NODE_ENV == 'production') {
 
 // Require api routes for application
 require('./server/routes')(app);
-
-// Serve GZIP'd JS file
-app.get('*.js', (req, res, next) => {
-  req.url = req.url + '.gz';
-  res.set('Content-Encoding', 'gzip');
-  res.set('Content-Type', 'text/javascript');
-  next();
-});
 
 // universal routing and rendering
 app.get('*', (req, res) => {
