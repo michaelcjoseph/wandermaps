@@ -6,8 +6,9 @@
   "scripts": {
     "sitemap": "babel-node -- src/sitemap_builder.js",
     "devserve": "webpack-dev-server --config webpack.dev.config.js --progress --colors",
-    "build": "NODE_ENV=production webpack -p --config ./webpack.prod.config.js --progress --colors",
-    "postinstall": "npm run build",
+    "build:js": "NODE_ENV=production webpack -p --config ./webpack.prod.config.js --progress --colors",
+    "build:css": "node-sass src/client/static/css/main.scss src/client/static/css/main.css",
+    "postinstall": "npm run build:js && npm run build:css",
     "start": "NODE_ENV=production STRIPE_SECRET_KEY=sk_live_yW4Zz5igmM5q4lFCLKWC1mUx babel-node -- src/server.js",
     "start:dev": "NODE_ENV=development STRIPE_SECRET_KEY=sk_test_pSkzzbEOMupTz1cqxGrcFbZO babel-node -- src/server.js"
   },
@@ -36,7 +37,7 @@
     "express-static-gzip": "^0.2.2",
     "http-server": "^0.10.0",
     "morgan": "^1.8.1",
-    "node-sass": "^4.5.2",
+    "node-sass": "^4.5.3",
     "pg": "^6.2.2",
     "pg-hstore": "^2.3.2",
     "react": "^15.5.3",
