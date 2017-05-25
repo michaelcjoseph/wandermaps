@@ -1,6 +1,7 @@
 import path from 'path';
 import { Server } from 'http';
 import Express from 'express';
+import compression from 'compression';
 import logger from 'morgan';
 import bodyParser from 'body-parser';
 import expressStaticGzip from 'express-static-gzip';
@@ -15,6 +16,8 @@ const app = new Express();
 const server = new Server(app);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'client', 'views'));
+
+app.use(compression());
 
 // define the folder that will be used for static assets
 app.use(expressStaticGzip(
