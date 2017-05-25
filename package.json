@@ -8,7 +8,7 @@
     "devserve": "webpack-dev-server --config webpack.dev.config.js --progress --colors",
     "build:js": "NODE_ENV=production webpack -p --config ./webpack.prod.config.js --progress --colors",
     "convert:sass": "node-sass src/client/static/css/main.scss src/client/static/css/main.css",
-    "minify:css": "cssnano src/client/static/css/main.css src/client/static/css/main.min.css",
+    "minify:css": "cssnano src/client/static/css/main.scss src/client/static/css/main.min.css",
     "minify:img": "imagemin src/client/static/img/raw-png/* --out-dir=src/client/static/img/min-png",
     "build:css": "npm run convert:sass && npm run minify:css",
     "postinstall": "npm run build:js && npm run build:css && npm run minify:img",
