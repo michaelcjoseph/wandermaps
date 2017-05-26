@@ -19,7 +19,7 @@ const FixedSectionPanel = (props) => {
             alt="World Map"
           />
         </div>
-        <div className={(props.is_mobile ? "padding-for-header-mobile" : "padding-for-header") + " zindex100 right-align"}>
+        <div className="zindex100 right-align">
           <Link to="/about_us">
             <i className="fa fa-question-circle-o fa-3x about-us-button"></i>
           </Link>

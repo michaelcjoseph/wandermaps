@@ -37,10 +37,6 @@ const CityMap = (props) => {
 
   return (
     <div className="col-xs-12">
-      <Header 
-        email_form={true} 
-        back_button={true} 
-        back_route={"/" + props.city.id} />
       <FixedSectionPanel 
         classes={props.getSectionGridClasses()}
         styles={props.getSectionHeight()}

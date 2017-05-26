@@ -7,16 +7,13 @@ import CitiesList from './cities_list.jsx';
 
 const Home = (props) => {
   const getSecondSectionClasses = () => {
-    if (props.is_mobile) {
-      return "padding-for-header-mobile"
-    } else {
-      return "padding-for-header second-section-border"
+    if (!props.is_mobile) {
+      return "second-section-border"
     }
   };
 
   return (
     <div className="col-xs-12">
-      <Header back_button={false} email_form={true} />
       <FixedSectionPanel 
         classes={props.getSectionGridClasses()}
         styles={props.getSectionHeight()}
