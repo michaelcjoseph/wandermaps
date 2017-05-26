@@ -1,17 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router';
-import Header from './header.jsx';
 import FixedSectionPanel from './fixed_section_panel.jsx';
 import SearchBar from './search_bar.jsx';
 import CitiesList from './cities_list.jsx';
 
 const Home = (props) => {
-  const getSecondSectionClasses = () => {
-    if (!props.is_mobile) {
-      return "second-section-border"
-    }
-  };
-
   return (
     <div className="col-xs-12">
       <FixedSectionPanel 
@@ -29,8 +22,8 @@ const Home = (props) => {
         background_image="/img/svg/world_map.svg" />
       <div 
         id="maps"
-        className={"overflow-scroll position-relative " + getSecondSectionClasses() + props.getSectionGridClasses()} 
-        style={props.is_mobile ? null : props.getSectionHeight()} >
+        className={props.getSecondSectionClasses() + props.getSectionGridClasses()} 
+        style={props.getSectionStyle()} >
         <SearchBar 
           is_mobile={props.is_mobile}
           search_value={props.search_value} 

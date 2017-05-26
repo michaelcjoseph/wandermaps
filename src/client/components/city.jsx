@@ -1,16 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
-import Header from './header.jsx';
 import MapsList from './maps_list.jsx';
 import FixedSectionPanel from './fixed_section_panel.jsx';
 
 const City = (props) => {
-  const getSecondSectionClasses = () => {
-    if (!props.is_mobile) {
-      return "overflow-scroll second-section-border"
-    }
-  };
-
   const getMapsList = () => {
     return (
       <div className="col-xs-12">
@@ -26,8 +19,8 @@ const City = (props) => {
           background_image={"/img/min-png/" + props.route.city.image} />
         <div 
           id={props.route.city.city}
-          className={getSecondSectionClasses() + props.getSectionGridClasses()}
-          style={props.getSectionHeight()}>
+          className={props.getSecondSectionClasses() + props.getSectionGridClasses()}
+          style={props.getSectionStyle()}>
           <MapsList city={props.route.city} />
         </div>
       </div>
@@ -40,8 +33,9 @@ const City = (props) => {
         props.children, {
           city: props.route.city,
           is_mobile: props.is_mobile,
+          getSectionStyle: props.getSectionStyle,
           getSectionHeight: props.getSectionHeight,
-          getSecondSectionClasses: getSecondSectionClasses,
+          getSecondSectionClasses: props.getSecondSectionClasses,
           getSectionGridClasses: props.getSectionGridClasses,
         }
       )

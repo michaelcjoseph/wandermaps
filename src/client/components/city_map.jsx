@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from './header.jsx';
 import FixedSectionPanel from './fixed_section_panel.jsx';
 import CityMapFree from './city_map_free.jsx';
 import PaidMap from '../containers/paid_map.jsx';

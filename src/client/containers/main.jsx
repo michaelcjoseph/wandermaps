@@ -17,6 +17,8 @@ class Main extends React.Component {
     this.handleWindowResize = this.handleWindowResize.bind(this);
     this.getSectionGridClasses = this.getSectionGridClasses.bind(this);
     this.getSectionHeight = this.getSectionHeight.bind(this);
+    this.getSecondSectionClasses = this.getSecondSectionClasses.bind(this);
+    this.getSectionStyle = this.getSectionStyle.bind(this);
   }
 
   // Once component is loaded, set up actions for resize and scroll
@@ -41,7 +43,8 @@ class Main extends React.Component {
   handleWindowResize() {
     this.setState({
       window_width: window.innerWidth,
-      window_height: window.innerHeight
+      window_height: window.innerHeight,
+      is_mobile: (window.innerWidth <= 991)
     });
   }
 
@@ -71,8 +74,22 @@ class Main extends React.Component {
     return " col-xs-12 col-sm-12 col-md-6 col-lg-6 ";
   }
 
+  getSectionStyle() {
+    return (
+      this.state.is_mobile
+      ? null 
+      : this.getSectionHeight()
+    );
+  }
+
   getSectionHeight() {
     return { height: this.state.window_height + 'px' };
+  }
+
+  getSecondSectionClasses() {
+    if (!this.state.is_mobile) {
+      return "overflow-scroll second-section-border ";
+    };
   }
 
   renderChildrenWithProps() {
@@ -82,10 +99,12 @@ class Main extends React.Component {
         search_value: this.state.search_value,
         window_width: this.state.window_width,
         maps_data: this.state.filtered_maps_data,
-        is_mobile: (this.state.window_width <= 991),
+        is_mobile: this.state.is_mobile,
         handleSearch: this.handleSearch,
         getSectionGridClasses: this.getSectionGridClasses,
-        getSectionHeight: this.getSectionHeight
+        getSectionStyle: this.getSectionStyle,
+        getSectionHeight: this.getSectionHeight,
+        getSecondSectionClasses: this.getSecondSectionClasses
       })
     );
 
