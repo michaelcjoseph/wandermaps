@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
 import Title from './title.jsx';
+import Header from './header.jsx';
 import DownArrow from './down_arrow.jsx';
 import LazyLoadImg from './lazy_load_img.jsx';
 
 const FixedSectionPanel = (props) => {
   return (
-    <div className={"center-align position0 overflow-hidden" + props.classes} style={props.styles}>
+    <div className={"position0 overflow-hidden" + props.classes} style={props.styles}>
       <div className="title-section top0 width100 height100 position-absolute col-xs-12">
         <div 
           className={
@@ -19,11 +20,7 @@ const FixedSectionPanel = (props) => {
             alt="World Map"
           />
         </div>
-        <div className="zindex100 right-align">
-          <Link to="/about_us">
-            <i className="fa fa-question-circle-o fa-3x about-us-button"></i>
-          </Link>
-        </div>
+        <Header parent={props.parent} />
         <Title 
           parent={props.parent}
           image={props.image} 
