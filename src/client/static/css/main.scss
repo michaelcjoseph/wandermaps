@@ -7,13 +7,16 @@
 $font-stack: 'Source Sans Pro', 'Open Sans', sans-serif;
 $header-font: 'Source Sans Pro', sans-serif;
 $body-font: 'Open Sans', sans-serif;
-$body-background-color: rgb(255,255,255);
+$color-white: #FFF;
+$color-black: #000;
+$color-light-gray: #E5E5E5;
+$color-dark-text: #173751;
 
 /* Bootstrap Customization */
 
 body {
   font-family: $font-stack;
-  background-color: $body-background-color;
+  background-color: $color-white;
 }
 
 h1, h2, h3 {
@@ -166,8 +169,8 @@ a {
 /* Header Bar */
 
 .header-nav {
-  background-color: rgb(159, 210, 236);
-  color: rgb(23, 55, 81);
+  background-color: $color-white;
+  color: $color-dark-text;
   box-shadow: 0 1px 3px 2px rgba(0,0,0,0.15);
   padding: 18px;
 }
@@ -179,7 +182,7 @@ a {
 }
 
 .back-button {
-  color: rgb(0,0,0);
+  color: $color-dark-text;
   padding-right: 2em;
 }
 
@@ -249,7 +252,7 @@ a {
 
 .second-section-border {
   border-style: solid;
-  border-color: #E5E5E5;
+  border-color: $color-light-gray;
   border-left-width: 3px;
   border-right-width: 0px;
   border-top-width: 0px;
@@ -260,12 +263,12 @@ a {
 
 .search-bar {
   padding: 18px;
-  background-color: $body-background-color;
+  background-color: $color-white;
 }
 
 .search-bar-border {
   border-style: solid;
-  border-color: #E5E5E5;
+  border-color: $color-light-gray;
   border-left-width: 0px;
   border-right-width: 0px;
   border-top-width: 0px;
@@ -274,7 +277,7 @@ a {
 
 .search-bar-border-mobile {
   border-style: solid;
-  border-color: #E5E5E5;
+  border-color: $color-light-gray;
   border-left-width: 0px;
   border-right-width: 0px;
   border-top-width: 3px;
@@ -302,7 +305,7 @@ a {
 
 .cities-list-item-border {
   border-style: solid;
-  border-color: $body-background-color;
+  border-color: $color-white;
   border-right-width: 2px;
   border-left-width: 0px;
   border-top-width: 0px;
@@ -311,7 +314,7 @@ a {
 
 .cities-list-item-border-mobile {
   border-style: solid;
-  border-color: $body-background-color;
+  border-color: $color-white;
   border-right-width: 0px;
   border-left-width: 0px;
   border-top-width: 0px;
@@ -331,7 +334,7 @@ a {
 }
 
 .cities-list-item-text {
-  color: rgb(255, 255, 255);
+  color: $color-white;
   top: 50%;
   transform: translateY(-50%);
   padding: 0;
@@ -344,12 +347,12 @@ a {
   border-style: solid;
   border-width: 0px 4px 4px 0px;
   background-color: #F5F5F5;
-  border-color: rgb(255, 255, 255);
-  color: rgb(47, 47, 47);
+  border-color: $color-white;
+  color: $color-dark-text;
 }
 
 .city-maps-item:hover {
-  color: rgb(255, 255, 255);
+  color: $color-white;
   background-color: #337ab7;
 
   .city-maps-item-inner {
