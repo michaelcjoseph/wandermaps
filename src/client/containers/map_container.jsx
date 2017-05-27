@@ -22,7 +22,22 @@ class PaidMap extends React.Component {
     this.handleStripePurchase = this.handleStripePurchase.bind(this);
   }
 
+  componentDidMount() {
+    var email = localStorage.getItem('email');
+
+    if (email) {
+      this.setState({
+        email: email
+      });
+
+      if (this.props.price) {
+        this.getUser(email);
+      }
+    }
+  }
+
   handleEmailFormSubmit(email) {
+    localStorage.setItem('email', email);
     this.setState({
       email: email
     });
