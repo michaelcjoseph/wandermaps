@@ -3,7 +3,7 @@ import CitiesListItem from './cities_list_item.jsx';
 
 const CitiesList = (props) => {
   const searchBarFixedPadding = () => {
-    return props.is_mobile ? "" : "padding-for-header";
+    return props.is_mobile ? "" : "padding-for-search-bar";
   };
 
   const renderMapItem = (item, i) => {

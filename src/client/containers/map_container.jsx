@@ -1,6 +1,7 @@
 import React from 'react';
 import Reqwest from 'reqwest';
 import CityMapPaid from '../components/city_map_paid.jsx';
+import CityMapFree from '../components/city_map_free.jsx';
 import CityMapFrame from '../components/city_map_frame.jsx';
 
 class PaidMap extends React.Component {
@@ -37,7 +38,9 @@ class PaidMap extends React.Component {
       contentType: 'application/json',
       success: (user) => {
         if (user.id) {
-          this.getPurchasedMap(user.id);
+          if (this.props.price) {
+            this.getPurchasedMap(user.id);
+          }
         } else {
           this.addUser(email);
         }
@@ -122,6 +125,10 @@ class PaidMap extends React.Component {
           handleSubmit={this.handleEmailFormSubmit}
           handleStripePurchase={this.handleStripePurchase} />
       );
+    } else if (this.state.email == '') {
+        return (
+          <CityMapFree handleSubmit={this.handleEmailFormSubmit} />
+        );
     } else {
       return <CityMapFrame url={this.props.map_url} />;
     }

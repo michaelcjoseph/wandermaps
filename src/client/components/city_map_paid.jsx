@@ -1,7 +1,6 @@
 import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import EmailForm from '../containers/email_form.jsx';
-import CityMapFrame from './city_map_frame.jsx';
 
 const CityMapPaid = (props) => {
   const getHeader = () => {
