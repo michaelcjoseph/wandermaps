@@ -17,16 +17,18 @@ const CityMapPaid = (props) => {
     if (props.show_stripe_button) {
       return ( 
         <div className="panel-padding panel-margin white-background col-xs-12">
-          <div className="panel-header-padding col-xs-12">
-            <h3 className="light-gray-text fat-font margin0 col-xs-12">
-              Email Address
-            </h3>
-          </div>
-          <div className="col-xs-12">
-            <p className="light-gray-text right-align margin0 col-xs-12">
-              {props.user_email}
-            </p>
-          </div>
+          <a className="col-xs-12" onClick={props.handleEmailChange}>
+            <div className="panel-header-padding col-xs-12">
+              <h3 className="light-gray-text fat-font margin0 col-xs-12">
+                Email Address
+              </h3>
+            </div>
+            <div className="col-xs-12">
+              <p className="light-gray-text right-align margin0 col-xs-12">
+                {props.user_email}
+              </p>
+            </div>
+          </a>
         </div>
       );
     } else {

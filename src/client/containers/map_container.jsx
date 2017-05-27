@@ -16,6 +16,7 @@ class PaidMap extends React.Component {
     };
 
     this.handleEmailFormSubmit = this.handleEmailFormSubmit.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
     this.getUser = this.getUser.bind(this);
     this.addUser = this.addUser.bind(this);
     this.getPurchasedMap = this.getPurchasedMap.bind(this);
@@ -43,6 +44,12 @@ class PaidMap extends React.Component {
     });
 
     this.getUser(email);
+  }
+
+  handleEmailChange() {
+    this.setState({
+      show_stripe_button: false
+    });
   }
 
   getUser(email) {
@@ -138,6 +145,7 @@ class PaidMap extends React.Component {
           is_map_paid={this.state.is_map_paid} 
           show_stripe_button={this.state.show_stripe_button}
           handleSubmit={this.handleEmailFormSubmit}
+          handleEmailChange={this.handleEmailChange}
           handleStripePurchase={this.handleStripePurchase} />
       );
     } else if (this.state.email == '') {
