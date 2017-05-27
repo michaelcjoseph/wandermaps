@@ -1,12 +1,9 @@
 import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import EmailForm from '../containers/email_form.jsx';
+import CityMapFrame from './city_map_frame.jsx';
 
 const CityMapPaid = (props) => {
-  const getMap = () => {
-    return <iframe src={props.map_url} width="100%" height="100%" />;
-  };
-
   const getHeader = () => {
     return (
       <div className="panel-padding panel-margin panel-border white-background col-xs-12">
@@ -104,17 +101,13 @@ const CityMapPaid = (props) => {
     }
   };
 
-  if (props.is_map_paid) {
-    return getMap();
-  } else {
-    return (
-      <div className="action-section-padding col-xs-12">
-        {getHeader()}
-        {getEmailForm()}
-        {getStripeButton()}
-      </div>
-    );
-  }
+  return (
+    <div className="action-section-padding col-xs-12">
+      {getHeader()}
+      {getEmailForm()}
+      {getStripeButton()}
+    </div>
+  );
 }
 
 export default CityMapPaid;

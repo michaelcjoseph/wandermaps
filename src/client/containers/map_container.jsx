@@ -1,6 +1,7 @@
 import React from 'react';
 import Reqwest from 'reqwest';
 import CityMapPaid from '../components/city_map_paid.jsx';
+import CityMapFrame from '../components/city_map_frame.jsx';
 
 class PaidMap extends React.Component {
   constructor(props) {
@@ -109,17 +110,21 @@ class PaidMap extends React.Component {
   }
 
   render() {
-    return (
-      <CityMapPaid
-        user_email={this.state.email}
-        map_title={this.props.map_title}
-        map_url={this.props.map_url} 
-        price={this.props.price}
-        is_map_paid={this.state.is_map_paid} 
-        show_stripe_button={this.state.show_stripe_button}
-        handleSubmit={this.handleEmailFormSubmit}
-        handleStripePurchase={this.handleStripePurchase} />
-    )
+    if (this.props.price && !this.state.is_map_paid) {
+      return (
+        <CityMapPaid
+          user_email={this.state.email}
+          map_title={this.props.map_title}
+          map_url={this.props.map_url} 
+          price={this.props.price}
+          is_map_paid={this.state.is_map_paid} 
+          show_stripe_button={this.state.show_stripe_button}
+          handleSubmit={this.handleEmailFormSubmit}
+          handleStripePurchase={this.handleStripePurchase} />
+      );
+    } else {
+      return <CityMapFrame url={this.props.map_url} />;
+    }
   }
 }
 

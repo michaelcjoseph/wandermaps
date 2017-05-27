@@ -2,8 +2,8 @@ import React from 'react';
 import Header from './header.jsx';
 import CityTitle from './city_title.jsx';
 import CityBlog from './city_blog.jsx';
-import CityMapFree from './city_map_free.jsx';
-import PaidMap from '../containers/paid_map.jsx';
+import CityMapFrame from './city_map_frame.jsx';
+import MapContainer from '../containers/map_container.jsx';
 
 const CityMap = (props) => {
   const getFirstSection = () => {
@@ -40,18 +40,16 @@ const CityMap = (props) => {
 
   const getCityMapBody = () => {
     if (props.route.city_map.url.length > 0) {
-      if (props.route.city_map.price) {
-        return (
-          <PaidMap
-            city={props.city.id}
-            map_title={props.route.city_map.title}
-            map_id={props.route.city_map.id}
-            map_url={props.route.city_map.url} 
-            price={props.route.city_map.price * 100} />
-        );
-      } else {
-        return <CityMapFree url={props.route.city_map.url} />;
-      }
+      const price = (props.route.city_map.price ? props.route.city_map.price * 100 : null);
+
+      return (
+        <MapContainer
+          city={props.city.id}
+          map_title={props.route.city_map.title}
+          map_id={props.route.city_map.id}
+          map_url={props.route.city_map.url} 
+          price={price} />
+      );
     } else {
       return getCityMapUnavailable();
     };
