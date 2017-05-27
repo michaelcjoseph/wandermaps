@@ -4,7 +4,9 @@ import MapsListItem from './maps_list_item.jsx';
 const MapsList = (props) => {
   const getMapsListItem = (city_map, i) => {
     return (
-      <MapsListItem key={i} city={props.city} city_map={city_map} />
+      <MapsListItem 
+        key={i} is_mobile={props.is_mobile}
+        city={props.city} city_map={city_map} />
     )
   }
 

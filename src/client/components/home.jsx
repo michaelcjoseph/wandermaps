@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 import Header from './header.jsx';
 import DownArrow from './down_arrow.jsx';
 import SearchBar from './search_bar.jsx';

@@ -12,7 +12,7 @@ const MapsListItem = (props) => {
 
   return (
     <Link to={"/" + props.city.id + "/" + props.city_map.id}>
-      <div className={"city-maps-item col-xs-12 col-md-6"}>
+      <div className={(props.is_mobile ? "city-maps-item-mobile" : "city-maps-item") + " col-xs-12 col-md-6"}>
         <div className={"city-maps-item-inner city-maps-item-padding height100 col-xs-8"}>
           <p className="thin-font">{getMapType(props.city_map.price)}</p>
           <h3 className="">{props.city_map.title}</h3>

@@ -1,30 +1,56 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Header from './header.jsx';
 import MapsList from './maps_list.jsx';
-import FixedSectionPanel from './fixed_section_panel.jsx';
+import CityBlog from './city_blog.jsx';
 
 const City = (props) => {
   const getMapsList = () => {
     return (
       <div className="col-xs-12">
-        <FixedSectionPanel 
-          classes={props.getSectionGridClasses()}
-          styles={props.getSectionHeight()}
-          is_mobile={props.is_mobile}
-          id_link={"/" + props.route.city.id + "/#" + props.route.city.city}
-          parent="city"
-          title={props.route.city.city}
-          subtitle={props.route.city.country}
-          description={props.route.city.description}
-          background_image={"/img/min-png/" + props.route.city.image} />
+        <div 
+          className={props.getSectionGridClasses() + getOverflowScroll()} 
+          style={props.getSectionStyle()} >
+          <Header parent="City" />
+          <div className="city-img-div dark-background display-block position-relative overflow-hidden center-align col-xs-12">
+            <div className="position-relative position0">
+              <img 
+                className="city-img width100 position-relative display-inline-block left0" 
+                src={"/img/min-png/" + props.route.city.image} />
+            </div>
+            <div className="cities-list-item-text position-absolute center-align width100 zindex1">
+              <h1 className="fat-font margin0 col-xs-12">{props.route.city.city}</h1>
+              <h3 className="thin-font margin0 col-xs-12">{props.route.city.country}</h3>
+            </div>
+          </div>
+          {props.is_mobile ? null : getCityBlog()}
+        </div>
         <div 
           id={props.route.city.city}
           className={props.getSecondSectionClasses() + props.getSectionGridClasses()}
           style={props.getSectionStyle()}>
-          <MapsList city={props.route.city} />
+          <MapsList city={props.route.city} is_mobile={props.is_mobile} />
         </div>
+        {props.is_mobile ? getCityBlog() : null}
       </div>
     )
+  };
+
+  const getOverflowScroll = () => {
+    if (!props.is_mobile) {
+      return "overflow-scroll";
+    };
+
+    return ""
+  };
+
+  const getCityBlog = () => {
+    return (
+      <CityBlog 
+        city_desc={props.route.city.description}
+        id_link={"/" + props.route.city.id + "/#" + props.route.city.city}
+      />
+    );
   };
 
   const getMapView = () => {

@@ -10,13 +10,15 @@ $body-font: 'Open Sans', sans-serif;
 $color-white: #FFF;
 $color-black: #000;
 $color-light-gray: #E5E5E5;
-$color-dark-text: #173751;
+$color-light-text: #8F8F8F;
+$color-dark-text: #444444;
 
 /* Bootstrap Customization */
 
 body {
   font-family: $font-stack;
   background-color: $color-white;
+  color: $color-dark-text;
 }
 
 h1, h2, h3 {
@@ -164,13 +166,37 @@ a {
   font-weight: 300;
 }
 
+.white-text {
+  color: $color-white;
+}
+
+.dark-grey-text {
+  color: $color-dark-text;
+}
+
+.light-gray-text {
+  color: $color-light-text;
+}
+
+.dark-background {
+  background-color: $color-dark-text;
+}
+
 /**** First Section ****/
 
-/* Title Section */
+/* Header */
 
-.about-us-button {
-  padding: 14px;
+.header-button {
+  padding: 21px;
 }
+
+/* Down Arrow */
+
+.down-arrow {
+  top: 90%;
+}
+
+/* Home Page Title */
 
 .title-section {
   z-index: 99;
@@ -198,10 +224,6 @@ a {
   padding: 0 25px;
 }
 
-.down-arrow {
-  top: 90%;
-}
-
 /* Map Background */
 
 .map-background {
@@ -214,6 +236,21 @@ a {
 
 .background-svg {
   max-height: 100%;
+}
+
+/* City Page Title */
+
+.city-heading {
+  padding-top: 0.5em;
+  padding-bottom: 2.5em;
+}
+
+.city-img-div {
+  margin-bottom: 1.5em;
+}
+
+.city-img {
+  opacity: 0.4;
 }
 
 /**** Second Section ****/
@@ -319,7 +356,17 @@ a {
   color: $color-dark-text;
 }
 
-.city-maps-item:hover {
+.city-maps-item-mobile {
+  height: 50%;
+  border-style: solid;
+  border-width: 0px 0px 4px 0px;
+  background-color: #F5F5F5;
+  border-color: $color-white;
+  color: $color-dark-text;
+}
+
+.city-maps-item:hover, 
+.city-maps-item-mobile:hover {
   color: $color-white;
   background-color: #337ab7;
 
