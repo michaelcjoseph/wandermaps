@@ -178,8 +178,16 @@ a {
   color: $color-light-text;
 }
 
+.white-background {
+  background-color: $color-white;
+}
+
 .dark-background {
   background-color: $color-dark-text;
+}
+
+.gray-background {
+  background-color: #F5F5F5;
 }
 
 /**** First Section ****/
@@ -406,10 +414,31 @@ a {
 
 /*** City Map ***/
 
-.input-padding {
+.action-section-padding {
   padding-top: 15px;
   padding-left: 1em;
   padding-right: 1em;
+}
+
+.panel-padding {
+  padding: 1.5em 1em;
+}
+
+.panel-margin {
+  margin-bottom: 2em;
+}
+
+.panel-border {
+  border-bottom-style: solid;
+  border-bottom-color: $color-dark-text;
+}
+
+.panel-header-padding {
+  padding-bottom: 2em;
+}
+
+.panel-item-padding {
+  padding-bottom: 1.5em;
 }
 
 .action-item-margin {
@@ -449,4 +478,10 @@ a {
 .body-text {
   font-size: 1.2em;
   line-height: 1.8em;
+}
+
+/*** Email Form ***/
+
+.email-form-padding {
+  padding-right: 10px;
 }

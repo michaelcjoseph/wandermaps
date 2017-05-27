@@ -31,7 +31,7 @@ const CityMap = (props) => {
     return (
       <div 
         id={props.city.city}
-        className={props.getSecondSectionClasses() + props.getSectionGridClasses()}
+        className={"gray-background " + props.getSecondSectionClasses() + props.getSectionGridClasses()}
         style={props.getSectionHeight()}>
         {getCityMapBody()}
       </div>

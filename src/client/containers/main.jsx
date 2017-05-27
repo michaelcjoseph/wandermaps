@@ -90,6 +90,8 @@ class Main extends React.Component {
     if (!this.state.is_mobile) {
       return "overflow-scroll second-section-border ";
     };
+
+    return "";
   }
 
   renderChildrenWithProps() {

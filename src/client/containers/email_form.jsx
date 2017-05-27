@@ -46,7 +46,7 @@ class EmailForm extends React.Component {
     return (
       <form className="col-xs-12" onSubmit={ this.handleSubmit }>
         <div className="col-xs-12">
-          <Col xs={ 8 }>
+          <Col xs={ 9 } className="email-form-padding">
             <FormGroup className="margin0">
               <input
                 className="form-control text-center"
@@ -56,7 +56,7 @@ class EmailForm extends React.Component {
               />
             </FormGroup>
           </Col>
-          <Col xs={ 4 }>
+          <Col xs={ 3 }>
             <Button type="submit" bsStyle="primary" block>{this.props.button_text}</Button>
           </Col>
         </div>
