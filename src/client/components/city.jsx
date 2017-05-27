@@ -1,10 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router';
 import Header from './header.jsx';
 import MapsList from './maps_list.jsx';
+import CityTitle from './city_title.jsx';
 import CityBlog from './city_blog.jsx';
 
 const City = (props) => {
+  const getCityView = () => {
+    if (props.children) {
+      return getMapView();
+    } else {
+      return getMapsList();
+    }
+  }
+
   const getMapsList = () => {
     return (
       <div className="col-xs-12">
@@ -12,17 +20,10 @@ const City = (props) => {
           className={props.getSectionGridClasses() + getOverflowScroll()} 
           style={props.getSectionStyle()} >
           <Header parent="City" />
-          <div className="city-img-div dark-background display-block position-relative overflow-hidden center-align col-xs-12">
-            <div className="position-relative position0">
-              <img 
-                className="city-img width100 position-relative display-inline-block left0" 
-                src={"/img/min-png/" + props.route.city.image} />
-            </div>
-            <div className="cities-list-item-text position-absolute center-align width100 zindex1">
-              <h1 className="fat-font margin0 col-xs-12">{props.route.city.city}</h1>
-              <h3 className="thin-font margin0 col-xs-12">{props.route.city.country}</h3>
-            </div>
-          </div>
+          <CityTitle 
+            city_img={props.route.city.image}
+            city_name={props.route.city.city}
+            city_country={props.route.city.country} />
           {props.is_mobile ? null : getCityBlog()}
         </div>
         <div 
@@ -58,19 +59,12 @@ const City = (props) => {
           is_mobile: props.is_mobile,
           getSectionStyle: props.getSectionStyle,
           getSectionHeight: props.getSectionHeight,
+          getOverflowScroll: getOverflowScroll,
           getSecondSectionClasses: props.getSecondSectionClasses,
           getSectionGridClasses: props.getSectionGridClasses,
         }
       )
     )
-  }
-
-  const getCityView = () => {
-    if (props.children) {
-      return getMapView();
-    } else {
-      return getMapsList();
-    }
   }
 
   return (

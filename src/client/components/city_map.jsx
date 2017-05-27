@@ -1,18 +1,41 @@
 import React from 'react';
-import FixedSectionPanel from './fixed_section_panel.jsx';
+import Header from './header.jsx';
+import CityTitle from './city_title.jsx';
+import CityBlog from './city_blog.jsx';
 import CityMapFree from './city_map_free.jsx';
 import PaidMap from '../containers/paid_map.jsx';
 
 const CityMap = (props) => {
-  const getCityMapUnavailable = () => {
+  const getFirstSection = () => {
     return (
-      <div className="col-xs-12 center-align padding-for-header">
-        <h3 className="padding-for-header title-subtext col-xs-12">
-          This map will be available soon! Subscribe above to be informed when 
-          it is ready. 
-        </h3>
+      <div 
+        className={props.getSectionGridClasses() + props.getOverflowScroll()} 
+        style={props.getSectionStyle()} >
+        <Header parent="City" />
+        <CityTitle 
+          city_img={props.city.image}
+          city_name={props.route.city_map.title}
+          city_country={props.city.country} />
+        {props.is_mobile ? null : getCityBlog()}
       </div>
-    )
+    );
+  };
+
+  const getCityBlog = () => {
+    return (
+      <CityBlog city_desc={props.route.city_map.description} />
+    );
+  };
+
+  const getSecondSection = () => {
+    return (
+      <div 
+        id={props.city.city}
+        className={props.getSecondSectionClasses() + props.getSectionGridClasses()}
+        style={props.getSectionHeight()}>
+        {getCityMapBody()}
+      </div>
+    );
   };
 
   const getCityMapBody = () => {
@@ -34,24 +57,21 @@ const CityMap = (props) => {
     };
   };
 
+  const getCityMapUnavailable = () => {
+    return (
+      <div className="col-xs-12 center-align padding-for-header">
+        <h3 className="padding-for-header title-subtext col-xs-12">
+          This map will be available soon! Subscribe above to be informed when 
+          it is ready. 
+        </h3>
+      </div>
+    )
+  };
+
   return (
     <div className="col-xs-12">
-      <FixedSectionPanel 
-        classes={props.getSectionGridClasses()}
-        styles={props.getSectionHeight()}
-        is_mobile={props.is_mobile}
-        id_link={"/" + props.city.id + "/" + props.route.city_map.id + "/#" + props.city.city}
-        parent="city"
-        title={props.route.city_map.title}
-        subtitle={""}
-        description={props.route.city_map.description}
-        background_image={"/img/min-png/" + props.city.image} />
-      <div 
-        id={props.city.city}
-        className={props.getSecondSectionClasses() + props.getSectionGridClasses()}
-        style={props.getSectionHeight()}>
-        {getCityMapBody()}
-      </div>
+      {getFirstSection()}
+      {getSecondSection()}
     </div>
   );
 }
