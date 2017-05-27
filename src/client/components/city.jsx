@@ -46,10 +46,7 @@ const City = (props) => {
 
   const getCityBlog = () => {
     return (
-      <CityBlog 
-        city_desc={props.route.city.description}
-        id_link={"/" + props.route.city.id + "/#" + props.route.city.city}
-      />
+      <CityBlog city_desc={props.route.city.description} />
     );
   };
 
