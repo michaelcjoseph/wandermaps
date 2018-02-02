@@ -14,8 +14,8 @@
     "minify:svg": "imagemin --plugin=svgo src/client/static/img/svg/* --out-dir=build",
     "build:img": "npm run minify:png",
     "postinstall": "npm run build:js && npm run build:css && npm run build:img",
-    "start": "NODE_ENV=production STRIPE_SECRET_KEY=sk_live_yW4Zz5igmM5q4lFCLKWC1mUx babel-node -- src/server.js",
-    "start:dev": "NODE_ENV=development STRIPE_SECRET_KEY=sk_test_pSkzzbEOMupTz1cqxGrcFbZO babel-node -- src/server.js"
+    "start": "NODE_ENV=production babel-node -- src/server.js",
+    "start:dev": "NODE_ENV=development babel-node -- src/server.js"
   },
   "engines": {
     "node": "^6.10.2",
