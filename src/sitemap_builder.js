@@ -6,6 +6,6 @@ import routes from './client/routes.jsx';
 
 const sitemap = (
   new Sitemap(routes)
-    .build('https://www.wandermaps.io')
+    .build('https://wandermaps.herokuapp.com/')
     .save(path.join(__dirname, 'client', 'static', 'sitemap.xml'))
 );
